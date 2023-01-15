@@ -1,0 +1,48 @@
+{
+    "students": [
+        {
+            "id": "105688",
+            "password": "ninoistcool",
+            "studentData": {
+                "name": {
+                    "firstName": "Nino-Julian",
+                    "lastName": "Müller"
+                },
+                "courses": [
+                    "rechnernetze", "gui"
+                ],
+                "calendar": [
+                    {
+                        "timestamp": 22,
+                        "title": "Unwichtiger Termin",
+                        "descriptions": "Coole Beschreibung"
+                    },
+                    {
+                        "timestamp": 2222,
+                        "title": "Wichtiger Termin",
+                        "descriptions": "Coolere Beschreibung"
+                    }
+                ],
+                "todos": [
+                    {
+                        "text": "Für Klausuren anmelden",
+                        "checked": true
+                    },
+                    {
+                        "text": "Bachelor thema festlegen",
+                        "checked": false
+                    }
+                ]
+            }
+        },
+        {
+            "id": "105689",
+            "password": "nino",
+            "studentData": {
+                "courses": [],
+                "calendar": [],
+                "todos": []
+            }
+        }
+    ]
+}

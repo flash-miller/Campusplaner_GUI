@@ -61,9 +61,7 @@ export default {
     }),
     methods: {
         login() {
-            console.log("user", this.user);
-            console.log("password", this.userPassword);
-            store.dispatch('setUserData', {userName: this.user, userPassword: this.userPassword});
+            store.dispatch('login', {userName: this.user, userPassword: this.userPassword});
             this.$router.push("/");
         },
     },
