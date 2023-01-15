@@ -5,6 +5,7 @@ import UniversityView from '../views/UniversityView.vue'
 import CoursesView from '../views/CoursesView.vue'
 import EducationView from '../views/EducationView.vue'
 import NotificationsView from '../views/NotificationsView.vue'
+import SettingsView from '../views/SettingsView.vue'
 import store from "../store"
 
 const routes = [
@@ -54,6 +55,12 @@ const routes = [
     name: 'notifications',
     component: NotificationsView,
     meta: { title: "Benachrichtigungen" }
+  },
+  {
+    path: '/settings',
+    name: 'settings',
+    component: SettingsView,
+    meta: { title: "Einstellungen" }
   },
   {
     path: '/about',
