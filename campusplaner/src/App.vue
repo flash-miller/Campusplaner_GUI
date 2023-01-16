@@ -71,4 +71,8 @@ export default {
   right: 25px;
   font-size: 9px;
 }
+
+h3 {
+  color: #1C2764;
+}
 </style>      
