@@ -3,29 +3,60 @@ import createPersistedState from 'vuex-persistedstate';
 
 export default createStore({
   state: {
-    userData: {
-      userName: "",
-      userPassword: "",
-    },
+    studentData: {},
+    isLoggedIn: false
   },
   getters: {
     isLoggedIn(state){
-      return state.userData.userName != "" && state.userData.userPassword != "";
+      return state.isLoggedIn;
+    },
+    getStudentData(state){
+      return state.studentData;
+    },
+    getStudentCourses(state){
+      return state.studentData.courses;
+    },
+    getStudentCalendar(state){
+      return state.studentData.calendar;
+    },
+    getStudentTodos(state){
+      return state.studentData.todos;
+    },
+    getStudentName(state){
+      return state.studentData.name;
     }
   },
   mutations: {
-    setUserData(state, payload) {
-      state.userData.userName = payload.userName;
-      state.userData.userPassword = payload.userPassword;
+    setStudentData(state, payload) {
+      state.studentData = payload;
+      state.isLoggedIn = true;
     },
     logout(state){
-      state.userData.userName = "";
-      state.userData.userPassword = "";
+      state.studentData = {};
+      state.isLoggedIn = false;
     }
   },
   actions: {
-    setUserData({commit}, payload) {
-      commit('setUserData', {userName: payload.userName, userPassword: payload.userPassword});
+    login({commit}, payload){
+      // Load student data json
+      const studentData = require('./../assets/data/studentData.json');
+
+      const matchedUser = studentData.students.find(e => {
+        return e.id === payload.userName;
+      });
+
+      // Check if username is present
+      if(!matchedUser){
+        return;
+      }
+
+      // Check if password is correct
+      if(matchedUser.password !== payload.userPassword){
+        return;
+      }
+
+      // Set user information
+      commit('setStudentData', matchedUser.studentData);
     },
     logout({commit}) {
       commit('logout');

@@ -7,7 +7,7 @@
     </div>
     <div class="loginContainer">
         <h1>CAMPUSPLANER</h1>
-        <CampusLogin></CampusLogin>
+        <CampusLogin/>
     </div>
     <div class="footerInformation">
         This is a product demo by Alisa Elin Mach, Nino-Julian Müller, Maarten Pohle and Vanessa Thörner for the Fachhochschule Wedel.
@@ -45,8 +45,8 @@ export default {
 
     .greeting {
         font-family: "Barlow", Helvetica, Arial;
-        width: 33%;
-        font-size: 60px;
+        width: 450px;
+        font-size: 50px;
         line-height: normal;
         color: white;
     }
