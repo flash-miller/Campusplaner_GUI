@@ -1,5 +1,12 @@
 <template>
-    <h1>Profil </h1>
+     <v-row no-gutters>
+    <v-col
+      cols="6"
+      md="6"
+      sm="12"
+      >
+      <v-card>
+        <h1>Profil </h1>
     <v-img class="profilbild" :src="require('@/assets/profilbilddefault.png')" />
 
 
@@ -65,27 +72,60 @@
         <p>{{ getStudyMail() }}</p>
     </div>
 
-
-    <p>Darkmode <label class="switch">
+      </v-card>
+    </v-col>
+    <v-col
+      cols="6"
+      md="6"
+      sm="12"
+    >
+      <v-card outlined tile>
+        <h2>Einstellungen</h2>
+        <div class="info">
+        <p>Darkmode </p>
+        <label class="switch">
             <input type="checkbox" onclick="darkmode()">
             <span class="slider round"></span>
-        </label></p>
-    <p>Schrift vergrößern <label class="switch">
+        </label>
+    </div>
+
+    <div class="info">
+        <p>Schrift vergrößern</p>
+        <label class="switch">
             <input type="checkbox" onclick="fontsize()">
             <span class="slider round"></span>
-        </label></p>
-    <p>Benachrichtigungen Hochschule <label class="switch">
+        </label>
+    </div>
+    <div class="info">
+        <p>Benachrichtigungen Hochschule</p>
+        <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
-        </label></p>
-    <p>Benachrichtigungen Dozenten <label class="switch">
+        </label>
+    </div>
+    <div class="info">
+        <p>Benachrichtigungen Dozenten</p>
+        <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
-        </label></p>
-    <p>Benachrichtigungen Kalender <label class="switch">
+        </label>
+    </div>
+
+    <div class="info">
+
+        <p>Benachrichtigungen Kalender</p>
+        <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
-        </label></p>
+        </label>
+    </div>
+
+      </v-card>
+    </v-col>
+  </v-row>
+   
+   
+
 </template>
 
 <script>
@@ -147,10 +187,10 @@ export default {
 </script>
 
 <style>
-.info{
+.info {
     display: flex;
     justify-content: space-between;
-    width: 20%;
+    width: 70%;
 }
 
 .profilbild {
