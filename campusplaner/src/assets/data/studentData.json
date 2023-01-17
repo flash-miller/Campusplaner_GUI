@@ -8,6 +8,19 @@
                     "firstName": "Nino-Julian",
                     "lastName": "Müller"
                 },
+                "info": {
+                    "birthday": "Nino-Julian",
+                    "adress": "Müller",
+                    "email": "Müller",
+                    "phone": "Müller",
+                    "loginDate": "Müller",
+                    "studyBegin": "Müller",
+                    "studyTopic": "Müller",
+                    "studyType": "Müller",
+                    "actualSemester": "Müller",
+                    "matNumber": "Müller",
+                    "studyMail": "Müller"
+                },
                 "courses": [
                     "rechnernetze", "gui"
                 ],
