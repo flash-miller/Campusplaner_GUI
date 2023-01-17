@@ -28,6 +28,9 @@ export default createStore({
     },
     getNotifications(state){
       return state.notificationData;
+    },
+    getInfo(state){
+      return state.studentData.info;
     }
   },
   mutations: {
@@ -69,6 +72,9 @@ export default createStore({
     },
     logout({commit}) {
       commit('logout');
+    },
+    saveState({commit}){
+      
     }
   },
   modules: {
