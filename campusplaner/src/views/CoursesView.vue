@@ -3,15 +3,14 @@
     <h1>Deine Kursübersicht</h1>
     <div class="listbox-area">
   <div>
-	<input type="search" id="search" placeholder="Suche…">
+	<input type="search" id="search" placeholder="Suche…"/>
 	
     <ul id="ss_elem_list"
-        tabindex="0"
         role="listbox"
         aria-labelledby="ss_elem">
-        <v-card v-for ="courses in getStudenCourses()">
-          <li id="ss_elem_Np" role="option">
-        {{getStudenCourses()}}
+        <v-card v-for ="course in getStudentCourses()">
+        <li id="ss_elem_Np" role="option">
+        {{course}}
       </li>
         </v-card>
       
@@ -20,6 +19,18 @@
 </div>
   </div>
 </template>
+
+<script>
+import store from "../store";
+export default {
+    methods: {
+      getStudentCourses(){
+        return store.getters.getStudentCourses;
+      }
+    }
+  }
+
+</script>
 
 <style>.listbox-area {
     padding: 15px;
@@ -167,17 +178,4 @@ button[aria-disabled="true"] {
   white-space: nowrap;
 }</style>
 
-<script>
-import store from "../store";
-export default {
-    methods: {
-    
-         getStudenCourses() {
-            return store.getters.getStudenCourses;
-         },
-      
-       
-    }
-}
 
-</script>
