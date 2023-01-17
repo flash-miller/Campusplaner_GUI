@@ -43,6 +43,19 @@
                 "calendar": [],
                 "todos": []
             }
+        },
+        {
+            "id": "104588",
+            "password": "vanessa",
+            "studentData": {
+                "name": {
+                    "firstName": "Vanessa",
+                    "lastName": "Thörner"
+                },
+                "courses": [],
+                "calendar": [],
+                "todos": []
+            }
         }
     ]
 }

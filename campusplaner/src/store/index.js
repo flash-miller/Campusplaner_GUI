@@ -4,6 +4,7 @@ import createPersistedState from 'vuex-persistedstate';
 export default createStore({
   state: {
     studentData: {},
+    notificationData: {},
     isLoggedIn: false
   },
   getters: {
@@ -24,12 +25,18 @@ export default createStore({
     },
     getStudentName(state){
       return state.studentData.name;
+    },
+    getNotifications(state){
+      return state.notificationData;
     }
   },
   mutations: {
     setStudentData(state, payload) {
       state.studentData = payload;
       state.isLoggedIn = true;
+    },
+    setNotificationData(state, payload){
+      state.notificationData = payload;
     },
     logout(state){
       state.studentData = {};
@@ -40,6 +47,7 @@ export default createStore({
     login({commit}, payload){
       // Load student data json
       const studentData = require('./../assets/data/studentData.json');
+      const notificationData = require('./../assets/data/notificationData.json');
 
       const matchedUser = studentData.students.find(e => {
         return e.id === payload.userName;
@@ -57,6 +65,7 @@ export default createStore({
 
       // Set user information
       commit('setStudentData', matchedUser.studentData);
+      commit('setNotificationData', notificationData);
     },
     logout({commit}) {
       commit('logout');

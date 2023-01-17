@@ -7,7 +7,7 @@
       sm="12"
       >
       <v-card>
-        Hello
+        <NotificationOverview />
       </v-card>
     </v-col>
     <v-col
@@ -27,14 +27,12 @@ import { defineComponent } from 'vue';
 import store from "../store";
 
 // Components
-import HelloWorld from '../components/HelloWorld.vue';
 import NotificationOverview from '@/components/NotificationOverview.vue';
 
 export default defineComponent({
   name: 'HomeView',
 
   components: {
-    HelloWorld,
     NotificationOverview
   },
 
@@ -45,14 +43,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<style>
-  #notifications {
-    width: 70%;
-    float: left;
-  }
-  #helloWorld {
-    width: 30%;
-    float: right;
-  }
-</style>
