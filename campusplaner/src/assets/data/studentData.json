@@ -26,11 +26,13 @@
                 "todos": [
                     {
                         "text": "Für Klausuren anmelden",
-                        "checked": true
+                        "checked": true,
+                        "time": 1675810800000
                     },
                     {
                         "text": "Bachelor thema festlegen",
-                        "checked": false
+                        "checked": false,
+                        "time": 1676156400000
                     }
                 ]
             }

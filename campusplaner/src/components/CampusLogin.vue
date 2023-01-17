@@ -6,6 +6,7 @@
             :rules="userRules"
             hide-details="auto"
             @input="v => user= v.target.value"
+            v-on:keyup.enter="login()"
         ></v-text-field>
         <v-text-field
             class="passwordField"
@@ -14,6 +15,7 @@
             @click:append="() => (value = !value)"
             :type="value ? 'password' : 'text'"
             @input="v => userPassword= v.target.value"
+            v-on:keyup.enter="login()"
         ></v-text-field>
         <v-btn
             class="loginButton"

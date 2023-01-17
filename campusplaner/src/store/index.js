@@ -60,6 +60,9 @@ export default createStore({
     },
     logout({commit}) {
       commit('logout');
+    },
+    saveState({commit}){
+      
     }
   },
   modules: {

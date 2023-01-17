@@ -16,7 +16,7 @@
       sm="12"
     >
       <v-card outlined tile>
-        Hello2
+        <TodoComponent/>
       </v-card>
     </v-col>
   </v-row>
@@ -28,12 +28,13 @@ import store from "../store";
 
 // Components
 import HelloWorld from '../components/HelloWorld.vue';
+import TodoComponent from '@/components/TodoComponent.vue';
 
 export default defineComponent({
   name: 'HomeView',
 
   components: {
-    HelloWorld,
+    HelloWorld,TodoComponent
   },
 
   methods: {
