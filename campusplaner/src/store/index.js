@@ -24,6 +24,9 @@ export default createStore({
     },
     getStudentName(state){
       return state.studentData.name;
+    },
+    getInfo(state){
+      return state.studentData.info;
     }
   },
   mutations: {

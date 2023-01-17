@@ -1,22 +1,74 @@
 <template>
     <h1>Profil </h1>
-    <v-img
-                class="profilbild"
-                :src="require('@/assets/profilbilddefault.png')"
-            />
-    <p>Matrikelnummer</p>
-    <p>E-Mail-Adresse</p>
-    <p>Passwort</p>
+    <v-img class="profilbild" :src="require('@/assets/profilbilddefault.png')" />
 
-    <h2>Informationen</h2>
-    <p>Vorname</p>
-    <p>Nachname</p>
-    <p>Straße/Hausnummer</p>
-    <p>Semester</p>
 
-    <p>Darkmode <label class="switch" >
+    <h2>Persönliche Daten</h2>
+    <div class="info">
+        <p>Vorname:</p>
+        <p>{{ getFirstName() }}</p>
+    </div>
+    <div class="info">
+        <p>Nachname:</p>
+        <p>{{ getLastName() }}</p>
+    </div>
+    <div class="info">
+        <p>Geburtstag:</p>
+        <p>{{ getBirthday() }}</p>
+    </div>
+    <div class="info">
+        <p>Adresse:</p>
+        <p>{{ getAdress() }}</p>
+    </div>
+    <div class="info">
+        <p>E-Mail:</p>
+        <p>{{ getEmail() }}</p>
+    </div>
+    <div class="info">
+        <p>Telefon:</p>
+        <p>{{ getPhone() }}</p>
+    </div>
+
+    <h2>Studium</h2>
+    <div class="info">
+        <p>Anmeldung:</p>
+        <p>{{ getLoginDate() }}</p>
+    </div>
+
+    <div class="info">
+        <p>Studienbeginn:</p>
+        <p>{{ getStudyBegin() }}</p>
+    </div>
+
+    <div class="info">
+        <p>Studiengang:</p>
+        <p>{{ getStudyTopic() }}</p>
+    </div>
+
+    <div class="info">
+        <p>Studienart:</p>
+        <p>{{ getStudyType() }}</p>
+    </div>
+
+    <div class="info">
+        <p>aktuelles Semester:</p>
+        <p>{{ getActualSemester() }}</p>
+    </div>
+
+    <div class="info">
+        <p>Matrikelnummer:</p>
+        <p>{{ getMatNumber() }}</p>
+    </div>
+
+    <div class="info">
+        <p>FH-Mail:</p>
+        <p>{{ getStudyMail() }}</p>
+    </div>
+
+
+    <p>Darkmode <label class="switch">
             <input type="checkbox" onclick="darkmode()">
-            <span class="slider round" ></span>
+            <span class="slider round"></span>
         </label></p>
     <p>Schrift vergrößern <label class="switch">
             <input type="checkbox" onclick="fontsize()">
@@ -26,29 +78,92 @@
             <input type="checkbox">
             <span class="slider round"></span>
         </label></p>
-        <p>Benachrichtigungen Dozenten <label class="switch">
+    <p>Benachrichtigungen Dozenten <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
         </label></p>
-        <p>Benachrichtigungen Kalender <label class="switch">
+    <p>Benachrichtigungen Kalender <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
         </label></p>
 </template>
 
 <script>
-function darkmode() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
+import store from "../store";
+export default {
+    methods: {
+        darkmode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        },
+
+        fontsize() {
+            var element = document.body;
+            element.classList.toggle("font-size");
+        },
+        getFirstName() {
+            return store.getters.getStudentName.firstName;
+        },
+        getLastName() {
+            return store.getters.getStudentName.lastName;
+        },
+        getBirthday() {
+            return store.getters.getInfo.birthday;
+        },
+        getAdress() {
+            return store.getters.getInfo.adress;
+        },
+        getEmail() {
+            return store.getters.getInfo.email;
+        },
+        getPhone() {
+            return store.getters.getInfo.phone;
+        },
+        getLoginDate() {
+            return store.getters.getInfo.loginDate;
+        },
+        getStudyBegin() {
+            return store.getters.getInfo.studyBegin;
+        },
+        getStudyTopic() {
+            return store.getters.getInfo.studyTopic;
+        },
+        getStudyType() {
+            return store.getters.getInfo.studyType;
+        },
+        getActualSemester() {
+            return store.getters.getInfo.actualSemester;
+        },
+        getMatNumber() {
+            return store.getters.getInfo.matNumber;
+        },
+        getStudyMail() {
+            return store.getters.getInfo.studyMail;
+        },
+
+    }
 }
 
-function darkmode() {
-   var element = document.body;
-   element.classList.toggle("font-size");
-}
 </script>
 
 <style>
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.profilbild {
+    border: solid;
+    border-color: black;
+    border-radius: 25px;
+    margin-bottom: 2%;
+
+    height: 150px;
+    width: 150px;
+}
+
+
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -113,8 +228,8 @@ input:checked+.slider:before {
 }
 
 .dark-mode {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
 
 .font-size {

@@ -8,6 +8,19 @@
                     "firstName": "Nino-Julian",
                     "lastName": "Müller"
                 },
+                "info": {
+                    "birthday": "Nino-Julian",
+                    "adress": "Hafenstraße 32",
+                    "email": "njm@gmail.de",
+                    "phone": "0160 2525238",
+                    "loginDate": "01.01.2023",
+                    "studyBegin": "Müller",
+                    "studyTopic": "Müller",
+                    "studyType": "Müller",
+                    "actualSemester": "Müller",
+                    "matNumber": "Müller",
+                    "studyMail": "Müller"
+                },
                 "courses": [
                     "rechnernetze", "gui"
                 ],
