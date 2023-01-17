@@ -9,9 +9,12 @@
         tabindex="0"
         role="listbox"
         aria-labelledby="ss_elem">
-      <li id="ss_elem_Np" role="option">
+        <v-card v-for ="courses in getStudenCourses()">
+          <li id="ss_elem_Np" role="option">
         {{getStudenCourses()}}
       </li>
+        </v-card>
+      
     </ul>
   </div>
 </div>

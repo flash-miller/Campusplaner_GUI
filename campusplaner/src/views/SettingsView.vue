@@ -5,63 +5,63 @@
 
     <h2>Persönliche Daten</h2>
     <div class="info">
-        <p>Vorname</p>
+        <p>Vorname:</p>
         <p>{{ getFirstName() }}</p>
     </div>
     <div class="info">
-        <p>Nachname</p>
+        <p>Nachname:</p>
         <p>{{ getLastName() }}</p>
     </div>
     <div class="info">
-        <p>Geburtstag</p>
+        <p>Geburtstag:</p>
         <p>{{ getBirthday() }}</p>
     </div>
     <div class="info">
-        <p>Adresse</p>
+        <p>Adresse:</p>
         <p>{{ getAdress() }}</p>
     </div>
     <div class="info">
-        <p>E-Mail</p>
+        <p>E-Mail:</p>
         <p>{{ getEmail() }}</p>
     </div>
     <div class="info">
-        <p>Telefon</p>
+        <p>Telefon:</p>
         <p>{{ getPhone() }}</p>
     </div>
 
     <h2>Studium</h2>
     <div class="info">
-        <p>Anmeldung</p>
+        <p>Anmeldung:</p>
         <p>{{ getLoginDate() }}</p>
     </div>
 
     <div class="info">
-        <p>Studienbeginn</p>
+        <p>Studienbeginn:</p>
         <p>{{ getStudyBegin() }}</p>
     </div>
 
     <div class="info">
-        <p>Studiengang</p>
+        <p>Studiengang:</p>
         <p>{{ getStudyTopic() }}</p>
     </div>
 
     <div class="info">
-        <p>Studienart</p>
+        <p>Studienart:</p>
         <p>{{ getStudyType() }}</p>
     </div>
 
     <div class="info">
-        <p>aktuelles Semester</p>
+        <p>aktuelles Semester:</p>
         <p>{{ getActualSemester() }}</p>
     </div>
 
     <div class="info">
-        <p>Matrikelnummer</p>
-        <p>{{ getmatNumber() }}</p>
+        <p>Matrikelnummer:</p>
+        <p>{{ getMatNumber() }}</p>
     </div>
 
     <div class="info">
-        <p>FH-Mail</p> 
+        <p>FH-Mail:</p>
         <p>{{ getStudyMail() }}</p>
     </div>
 
@@ -101,52 +101,58 @@ export default {
             var element = document.body;
             element.classList.toggle("font-size");
         },
-        // getFirstName() {
-        //     return store.getters.getStudentName.firstName;
-        // },
-        // getLastName() {
-        //     return store.getters.getStudentName.lastName;
-        // },
-        // getBirthday() {
-        //     return store.getters.getInfo.birthday;
-        // },
-        // getAdress() {
-        //     return store.getters.getInfo.adress;
-        // },
-        // getEmail() {
-        //     return store.getters.getInfo.email;
-        // },
-        // getPhone() {
-        //     return store.getters.getInfo.phone;
-        // },
-        // getLoginDate() {
-        //     return store.getters.getInfo.loginDate;
-        // },
-        // getStudyBegin() {
-        //     return store.getters.getInfo.studyBegin;
-        // },
-        // getStudyTopic() {
-        //     return store.getters.getInfo.studyTopic;
-        // },
-        // getStudyType() {
-        //     return store.getters.getInfo.studyType;
-        // },
-        // getActualSemester() {
-        //     return store.getters.getInfo.actualSemester;
-        // },
-        // getStudyMail() {
-        //     return store.getters.getInfo.matNumber;
-        // },
-        // getStudyMail() {
-        //     return store.getters.getInfo.studyMail;
-        // },
-       
+        getFirstName() {
+            return store.getters.getStudentName.firstName;
+        },
+        getLastName() {
+            return store.getters.getStudentName.lastName;
+        },
+        getBirthday() {
+            return store.getters.getInfo.birthday;
+        },
+        getAdress() {
+            return store.getters.getInfo.adress;
+        },
+        getEmail() {
+            return store.getters.getInfo.email;
+        },
+        getPhone() {
+            return store.getters.getInfo.phone;
+        },
+        getLoginDate() {
+            return store.getters.getInfo.loginDate;
+        },
+        getStudyBegin() {
+            return store.getters.getInfo.studyBegin;
+        },
+        getStudyTopic() {
+            return store.getters.getInfo.studyTopic;
+        },
+        getStudyType() {
+            return store.getters.getInfo.studyType;
+        },
+        getActualSemester() {
+            return store.getters.getInfo.actualSemester;
+        },
+        getMatNumber() {
+            return store.getters.getInfo.matNumber;
+        },
+        getStudyMail() {
+            return store.getters.getInfo.studyMail;
+        },
+
     }
 }
 
 </script>
 
 <style>
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
 .profilbild {
     border: solid;
     border-color: black;
