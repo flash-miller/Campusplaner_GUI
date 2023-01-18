@@ -1,5 +1,15 @@
 <template>
   <div class="about">
-    <h1>Hier kommen die Benachrichtigungen hin</h1>
+    <NotificationOverview />
   </div>
 </template>
+
+<script>
+import NotificationOverview from '@/components/NotificationOverview.vue';
+
+export default ({
+  components: {
+    NotificationOverview
+  },
+});
+</script>

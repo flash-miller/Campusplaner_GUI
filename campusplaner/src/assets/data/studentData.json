@@ -14,15 +14,16 @@
                     "email": "njm@gmail.de",
                     "phone": "0160 2525238",
                     "loginDate": "01.01.2023",
-                    "studyBegin": "Müller",
-                    "studyTopic": "Müller",
-                    "studyType": "Müller",
-                    "actualSemester": "Müller",
-                    "matNumber": "Müller",
-                    "studyMail": "Müller"
+                    "studyBegin": "01.04.2021",
+                    "studyTopic": "Medieninformatik",
+                    "studyType": "Vollzeit",
+                    "actualSemester": "6",
+                    "matNumber": "105688",
+                    "studyMail": "minf105688@stud.fh-wedel.de"
                 },
                 "courses": [
-                    "rechnernetze", "gui"
+                    0,
+                    1
                 ],
                 "calendar": [
                     {
@@ -53,6 +54,495 @@
         {
             "id": "105689",
             "password": "nino",
+            "studentData": {
+                "name": {
+                    "firstName": "Nino-Julian",
+                    "lastName": "Müller"
+                },
+                "info": {
+                    "birthday": "Nino",
+                    "adress": "Hafenstraße 32",
+                    "email": "njm@gmail.de",
+                    "phone": "0160 2525238",
+                    "loginDate": "01.01.2023",
+                    "studyBegin": "01.04.2021",
+                    "studyTopic": "Medieninformatik",
+                    "studyType": "Vollzeit",
+                    "actualSemester": "6",
+                    "matNumber": "105688",
+                    "studyMail": "minf105688@stud.fh-wedel.de"
+                },
+                "courses": [],
+                "calendar": [],
+                "todos": []
+            }
+        },
+        {
+            "id": "104588",
+            "password": "vanessa",
+            "studentData": {
+                "name": {
+                    "firstName": "Vanessa",
+                    "lastName": "Thörner"
+                },
+                "info": {
+                    "birthday": "16.01.1999",
+                    "adress": "Studentenwohnheim Wedel",
+                    "email": "v.thoerner@web.de",
+                    "phone": "0000 0000000",
+                    "loginDate": "01.01.2023",
+                    "studyBegin": "01.04.2021",
+                    "studyTopic": "Medieninformatik",
+                    "studyType": "Vollzeit",
+                    "actualSemester": "6",
+                    "matNumber": "104588",
+                    "studyMail": "minf104588@stud.fh-wedel.de"
+                },
+                "courses": [
+                    1,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "calendar": [],
+                "todos": []
+            }
+        },
+        {
+            "id": "104666",
+            "password": "maartenistcool",
+            "studentData": {
+                "name": {
+                    "firstName": "Maarten",
+                    "lastName": "Pohle"
+                },
+                "info": {
+                    "birthday": "25.01.2001",
+                    "adress": "Am Dorfteich",
+                    "email": "maartenp.jbs@gmx.de",
+                    "phone": "0160 4308282",
+                    "loginDate": "01.01.2023",
+                    "studyBegin": "01.04.2020",
+                    "studyTopic": "Medieninformatik",
+                    "studyType": "Vollzeit",
+                    "actualSemester": "6",
+                    "matNumber": "minf104666",
+                    "studyMail": "minf104666@stud-fh-wedel.de"
+                },
+                "courses": [
+                    3,
+                    1,
+                    2,
+                    7,
+                    8,
+                    9
+                ],
+                "calendar": [
+                    {
+                        "timestamp": 22,
+                        "title": "Unwichtiger Termin",
+                        "descriptions": "Coole Beschreibung"
+                    },
+                    {
+                        "timestamp": 2222,
+                        "title": "Wichtiger Termin",
+                        "descriptions": "Coolere Beschreibung"
+                    }
+                ],
+                "todos": [
+                    {
+                        "text": "Für Klausuren anmelden",
+                        "checked": true,
+                        "time": 1675810800000
+                    },
+                    {
+                        "text": "Kamera ausleihen",
+                        "checked": false,
+                        "time": 1676156400000
+                    }
+                ]
+            }
+        },
+        {
+            "id": "104666",
+            "password": "maarten",
+            "studentData": {
+                "courses": [],
+                "calendar": [],
+                "todos": []
+            }
+        },
+        {
+            "id": "12345",
+            "password": "ole",
+            "studentData": {
+                "name": {
+                    "firstName": "Ole",
+                    "lastName": "Nass"
+                },
+                "info": {
+                    "birthday": "01.01.1999",
+                    "adress": "Seeweg",
+                    "email": "ona@web.de",
+                    "phone": "0160 4161165",
+                    "loginDate": "01.01.2023",
+                    "studyBegin": "01.04.2020",
+                    "studyTopic": "Medieninformatik",
+                    "studyType": "Vollzeit",
+                    "actualSemester": "7",
+                    "matNumber": "minf12345",
+                    "studyMail": "minf12345@stud-fh-wedel.de"
+                },
+                "courses": [
+                    1,
+                    9,
+                    10
+                ],
+                "calendar": [
+                    {
+                        "timestamp": 22,
+                        "title": "Unwichtiger Termin",
+                        "descriptions": "Coole Beschreibung"
+                    },
+                    {
+                        "timestamp": 2222,
+                        "title": "Wichtiger Termin",
+                        "descriptions": "Coolere Beschreibung"
+                    }
+                ],
+                "todos": [
+                    {
+                        "text": "Alle mit 1.0 bewerten",
+                        "checked": false,
+                        "time": 1675810800000
+                    },
+                    {
+                        "text": "Klausur stellen",
+                        "checked": false,
+                        "time": 1676156400000
+                    },
+                    {
+                        "text": "Gastvortrag organisieren",
+                        "checked": true,
+                        "time": 1676156400000
+                    }
+                ]
+            }
+        },
+        {
+            "id": "12345",
+            "password": "ole",
+            "studentData": {
+                "courses": [],
+                "calendar": [],
+                "todos": []
+            }
+        },
+        {
+            "id": "12345",
+            "password": "ole",
+            "studentData": {
+                "name": {
+                    "firstName": "Ole",
+                    "lastName": "Nass"
+                },
+                "info": {
+                    "birthday": "01.01.1999",
+                    "adress": "Seeweg",
+                    "email": "ona@web.de",
+                    "phone": "0160 4161165",
+                    "loginDate": "01.01.2023",
+                    "studyBegin": "01.04.2020",
+                    "studyTopic": "Medieninformatik",
+                    "studyType": "Vollzeit",
+                    "actualSemester": "7",
+                    "matNumber": "minf12345",
+                    "studyMail": "minf12345@stud-fh-wedel.de"
+                },
+                "courses": [
+                    1,
+                    9,
+                    10
+                ],
+                "calendar": [
+                    {
+                        "timestamp": 22,
+                        "title": "Unwichtiger Termin",
+                        "descriptions": "Coole Beschreibung"
+                    },
+                    {
+                        "timestamp": 2222,
+                        "title": "Wichtiger Termin",
+                        "descriptions": "Coolere Beschreibung"
+                    }
+                ],
+                "todos": [
+                    {
+                        "text": "Alle mit 1.0 bewerten",
+                        "checked": false,
+                        "time": 1675810800000
+                    },
+                    {
+                        "text": "Klausur stellen",
+                        "checked": false,
+                        "time": 1676156400000
+                    },
+                    {
+                        "text": "Gastvortrag organisieren",
+                        "checked": true,
+                        "time": 1676156400000
+                    }
+                ]
+            }
+        },
+        {
+            "id": "104836",
+            "password": "casimir",
+            "studentData": {
+                "courses": [],
+                "calendar": [],
+                "todos": []
+            }
+        },
+        {
+            "id": "104836",
+            "password": "casimir",
+            "studentData": {
+                "name": {
+                    "firstName": "Casimir",
+                    "lastName": "Koslowski"
+                },
+                "info": {
+                    "birthday": "01.01.1999",
+                    "adress": "Seeweg",
+                    "email": "ck@web.de",
+                    "phone": "0160 6516545",
+                    "loginDate": "01.01.2023",
+                    "studyBegin": "01.10.2020",
+                    "studyTopic": "Medieninformatik",
+                    "studyType": "Vollzeit",
+                    "actualSemester": "5",
+                    "matNumber": "minf104836",
+                    "studyMail": "minf104836@stud-fh-wedel.de"
+                },
+                "courses": [
+                    1,
+                    9,
+                    10
+                ],
+                "calendar": [
+                    {
+                        "timestamp": 22,
+                        "title": "Unwichtiger Termin",
+                        "descriptions": "Coole Beschreibung"
+                    },
+                    {
+                        "timestamp": 2222,
+                        "title": "Wichtiger Termin",
+                        "descriptions": "Coolere Beschreibung"
+                    }
+                ],
+                "todos": [
+                    {
+                        "text": "Für Klausuren anmelden",
+                        "checked": true,
+                        "time": 1675810800000
+                    },
+                    {
+                        "text": "Klausur bestehen",
+                        "checked": false,
+                        "time": 1676156400000
+                    }
+                ]
+            }
+        },
+        {
+            "id": "104836",
+            "password": "casimir",
+            "studentData": {
+                "courses": [],
+                "calendar": [],
+                "todos": []
+            }
+        },
+        {
+            "id": "105835",
+            "password": "steffen",
+            "studentData": {
+                "name": {
+                    "firstName": "Steffen",
+                    "lastName": "Sobek"
+                },
+                "info": {
+                    "birthday": "01.01.1999",
+                    "adress": "Seeweg",
+                    "email": "so@web.de",
+                    "phone": "0160 858463653",
+                    "loginDate": "01.01.2023",
+                    "studyBegin": "01.10.2020",
+                    "studyTopic": "Medieninformatik",
+                    "studyType": "Vollzeit",
+                    "actualSemester": "5",
+                    "matNumber": "minf105835",
+                    "studyMail": "minf105835@stud-fh-wedel.de"
+                },
+                "courses": [
+                    1,
+                    9,
+                    10
+                ],
+                "calendar": [
+                    {
+                        "timestamp": 22,
+                        "title": "Unwichtiger Termin",
+                        "descriptions": "Coole Beschreibung"
+                    },
+                    {
+                        "timestamp": 2222,
+                        "title": "Wichtiger Termin",
+                        "descriptions": "Coolere Beschreibung"
+                    }
+                ],
+                "todos": [
+                    {
+                        "text": "Für Klausuren anmelden",
+                        "checked": false,
+                        "time": 1675810800000
+                    },
+                    {
+                        "text": "Klausur bestehen",
+                        "checked": true,
+                        "time": 1676156400000
+                    }
+                ]
+            }
+        },
+        {
+            "id": "105098",
+            "password": "robin",
+            "studentData": {
+                "name": {
+                    "firstName": "Robin",
+                    "lastName": "Chang"
+                },
+                "info": {
+                    "birthday": "01.01.1999",
+                    "adress": "Seeweg",
+                    "email": "rc@web.de",
+                    "phone": "0160 89465025",
+                    "loginDate": "01.01.2023",
+                    "studyBegin": "01.04.2020",
+                    "studyTopic": "Medieninformatik",
+                    "studyType": "Vollzeit",
+                    "actualSemester": "5",
+                    "matNumber": "stec105098",
+                    "studyMail": "stec105098@stud-fh-wedel.de"
+                },
+                "courses": [
+                    1,
+                    9,
+                    10
+                ],
+                "calendar": [
+                    {
+                        "timestamp": 22,
+                        "title": "Unwichtiger Termin",
+                        "descriptions": "Coole Beschreibung"
+                    },
+                    {
+                        "timestamp": 2222,
+                        "title": "Wichtiger Termin",
+                        "descriptions": "Coolere Beschreibung"
+                    }
+                ],
+                "todos": [
+                    {
+                        "text": "Für Klausuren anmelden",
+                        "checked": false,
+                        "time": 1675810800000
+                    },
+                    {
+                        "text": "Klausur bestehen",
+                        "checked": true,
+                        "time": 1676156400000
+                    }
+                ]
+            }
+        },
+        {
+            "id": "105098",
+            "password": "robin",
+            "studentData": {
+                "courses": [],
+                "calendar": [],
+                "todos": []
+            }
+        },
+        {
+            "id": "105098",
+            "password": "robin",
+            "studentData": {
+                "courses": [],
+                "calendar": [],
+                "todos": []
+            }
+        },
+        {
+            "id": "104962",
+            "password": "jonathan",
+            "studentData": {
+                "name": {
+                    "firstName": "Jonathan",
+                    "lastName": "Pultz"
+                },
+                "info": {
+                    "birthday": "01.01.1999",
+                    "adress": "Seeweg",
+                    "email": "jp@web.de",
+                    "phone": "0160 45465545",
+                    "loginDate": "01.01.2023",
+                    "studyBegin": "01.04.2020",
+                    "studyTopic": "Medieninformatik",
+                    "studyType": "Vollzeit",
+                    "actualSemester": "5",
+                    "matNumber": "minf104962",
+                    "studyMail": "minf104962@stud-fh-wedel.de"
+                },
+                "courses": [
+                    1,
+                    9,
+                    10
+                ],
+                "calendar": [
+                    {
+                        "timestamp": 22,
+                        "title": "Unwichtiger Termin",
+                        "descriptions": "Coole Beschreibung"
+                    },
+                    {
+                        "timestamp": 2222,
+                        "title": "Wichtiger Termin",
+                        "descriptions": "Coolere Beschreibung"
+                    }
+                ],
+                "todos": [
+                    {
+                        "text": "Für Klausuren anmelden",
+                        "checked": false,
+                        "time": 1675810800000
+                    },
+                    {
+                        "text": "Klausur bestehen",
+                        "checked": true,
+                        "time": 1676156400000
+                    }
+                ]
+            }
+        },
+        {
+            "id": "104962",
+            "password": "jonathan",
             "studentData": {
                 "courses": [],
                 "calendar": [],

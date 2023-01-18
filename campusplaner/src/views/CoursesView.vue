@@ -1,48 +1,97 @@
 <template>
-  <div class="about">
-    <h1>Deine Kursübersicht</h1>
-    <div class="listbox-area">
-  <div>
-	<input type="search" id="search" placeholder="Suche…"/>
-	
-    <ul id="ss_elem_list"
-        role="listbox"
-        aria-labelledby="ss_elem">
-        <v-card v-for ="course in getStudentCourses()">
-        <li id="ss_elem_Np" role="option">
-        {{course}}
-      </li>
-        </v-card>
-      
-    </ul>
-  </div>
-</div>
-  </div>
+  <v-row no-gutters>
+    <v-col cols="5" md="5" sm="12">
+      <v-card>
+        <div class="about">
+          <h1>Deine Kursübersicht</h1>
+          <div class="listbox-area">
+            <input type="search" id="search" placeholder="Suche…" />
+
+            <ul id="ss_elem_list" role="listbox" aria-labelledby="ss_elem">
+              <v-card v-for="course in getCoursesByStudent()">
+                <li id="ss_elem_Np" role="option">
+                  <v-row no-gutters>
+                    <v-col cols="11" md="11" sm="11">
+                      <p class="header">{{ course.name }}</p>
+                      <p class="infoText">{{ course.dozent }}</p>
+                      <p class="infoText">{{ course.period }}</p>
+                    </v-col>
+                    <v-col>
+                      <p class="arrow">></p>
+                    </v-col>
+                  </v-row>
+                </li>
+              </v-card>
+            </ul>
+          </div>
+        </div>
+      </v-card>
+    </v-col>
+    <v-col cols="7" md="7" sm="12">
+      <CourseDetail :courseId="courseId" />
+    </v-col>
+  </v-row>
+
 </template>
 
 <script>
 import store from "../store";
+import CourseDetail from "../components/CourseDetailComponent.vue";
+
 export default {
-    methods: {
-      getStudentCourses(){
-        return store.getters.getStudentCourses;
+  data() {
+    return {
+      passedData: {
+        courseId: "1"
       }
     }
+  },
+  components: {
+    CourseDetail,
+  },
+  methods: {
+    getStudentCourses() {
+      return store.getters.getStudentCourses;
+    },
+    getCoursesByStudent() {
+      const sCourses = store.getters.getStudentCourses;
+      const allCourses = store.getters.getCourse;
+
+      let studentCourses = [];
+      sCourses.forEach((id) => {
+        allCourses.forEach((c) => {
+          if (c.id == id)
+            studentCourses.push(c);
+        });
+      });
+
+      return studentCourses;
+    }
   }
+}
 
 </script>
 
-<style>.listbox-area {
-    padding: 15px;
-    border: 1px solid #aaa;
-    border-radius: 19px;
-    background: #eee;
-    margin-right: 50%
+<style>
+.arrow {
+  vertical-align: middle;
+}
+
+.termin {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.listbox-area {
+  padding: 10px;
+  border-radius: 19px;
+  background: #FFFFFF;
+  width: 100%
 }
 
 [role="listbox"] {
   min-height: 18em;
-  border: 1px solid #aaa;
   background: white;
 }
 
@@ -52,8 +101,8 @@ export default {
   overflow-y: auto;
 }
 
-[role="listbox"] + *,
-.listbox-label + * {
+[role="listbox"]+*,
+.listbox-label+* {
   margin-top: 1em;
 }
 
@@ -62,7 +111,7 @@ export default {
   padding: 0;
 }
 
-[role="group"] > [role="presentation"] {
+[role="group"]>[role="presentation"] {
   display: block;
   margin: 0;
   padding: 0 0.5em;
@@ -120,7 +169,7 @@ button[aria-haspopup="listbox"][aria-expanded="true"]::after {
   content: "";
 }
 
-button[aria-haspopup="listbox"] + [role="listbox"] {
+button[aria-haspopup="listbox"]+[role="listbox"] {
   position: absolute;
   margin: 0;
   width: 9.5em;
@@ -133,12 +182,12 @@ button[aria-haspopup="listbox"] + [role="listbox"] {
   display: flex;
 }
 
-[role="toolbar"] > * {
+[role="toolbar"]>* {
   border: 1px solid #aaa;
   background: #ccc;
 }
 
-[role="toolbar"] > [aria-disabled="false"]:focus {
+[role="toolbar"]>[aria-disabled="false"]:focus {
   background-color: #eee;
 }
 
@@ -176,6 +225,16 @@ button[aria-disabled="true"] {
   clip: rect(1px, 1px, 1px, 1px);
   font-size: 14px;
   white-space: nowrap;
-}</style>
+}
+
+.header {
+  color: #1C2764;
+  text-transform: uppercase;
+}
+
+.infoText {
+  color: #A8A8A8;
+}
+</style>
 
 
