@@ -1,4 +1,5 @@
 <template>
+    <div class="desktopView">
     <v-row no-gutters>
         <v-col cols="6" md="6" sm="12">
             <v-card>
@@ -115,9 +116,126 @@
             </v-card>
         </v-col>
     </v-row>
+</div>
 
+<div class="mobileView">
+    <v-row no-gutters>
+        <v-col cols="0" md="15" sm="10">
+            <v-card>
+                <h1>MEIN PROFIL</h1>
+                <v-img class="profilbild" :src="require('@/assets/profilbilddefault.png')" />
 
+                <h2>Persönliche Daten</h2>
+                <div class="info">
+                    <p>Vorname:</p>
+                    <p>{{ getFirstName() }}</p>
+                </div>
+                <div class="info">
+                    <p>Nachname:</p>
+                    <p>{{ getLastName() }}</p>
+                </div>
+                <div class="info">
+                    <p>Geburtstag:</p>
+                    <p>{{ getBirthday() }}</p>
+                </div>
+                <div class="info">
+                    <p>Adresse:</p>
+                    <p>{{ getAdress() }}</p>
+                </div>
+                <div class="info">
+                    <p>E-Mail:</p>
+                    <p>{{ getEmail() }}</p>
+                </div>
+                <div class="info">
+                    <p>Telefon:</p>
+                    <p>{{ getPhone() }}</p>
+                </div>
+            </v-card>
 
+            <v-card>
+                <h2>Studium</h2>
+                <div class="info">
+                    <p>Anmeldung:</p>
+                    <p>{{ getLoginDate() }}</p>
+                </div>
+
+                <div class="info">
+                    <p>Studienbeginn:</p>
+                    <p>{{ getStudyBegin() }}</p>
+                </div>
+
+                <div class="info">
+                    <p>Studiengang:</p>
+                    <p>{{ getStudyTopic() }}</p>
+                </div>
+
+                <div class="info">
+                    <p>Studienart:</p>
+                    <p>{{ getStudyType() }}</p>
+                </div>
+
+                <div class="info">
+                    <p>aktuelles Semester:</p>
+                    <p>{{ getActualSemester() }}</p>
+                </div>
+
+                <div class="info">
+                    <p>Matrikelnummer:</p>
+                    <p>{{ getMatNumber() }}</p>
+                </div>
+
+                <div class="info">
+                    <p>FH-Mail:</p>
+                    <p>{{ getStudyMail() }}</p>
+                </div>
+            </v-card>
+            <v-card outlined tile>
+                <h2>Einstellungen</h2>
+                <div class="info">
+                    <p>Darkmode {{ isDark }}</p>
+                    <label class="switch">
+                        <input type="checkbox" @click="darkmode()">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="info">
+                    <p>Schrift vergrößern</p>
+                    <label class="switch">
+                        <input type="checkbox" @click="fontsize()">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="info">
+                    <p>Benachrichtigungen Hochschule</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="info">
+                    <p>Benachrichtigungen Dozenten</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="info">
+
+                    <p>Benachrichtigungen Kalender</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+            </v-card>
+        </v-col>
+       
+    </v-row>
+
+</div>
 </template>
 
 <script>
@@ -127,7 +245,7 @@ export default {
     methods: {
         darkmode() {
             var element = document.querySelector('main');
-            var element2 = document.querySelectorAll('');
+            var element2 = document.querySelectorAll('v-card');
             element.classList.toggle("dark-mode");
             element2.classList.toggle("dark-mode");
          
@@ -182,8 +300,32 @@ export default {
 
 </script>
 
-
 <style>
+
+
+@media (max-width: 700px) {
+  .desktopView{
+    visibility: hidden;
+  }
+}
+
+
+
+@media (min-width: 701px) {
+  .mobileView{
+    visibility: hidden;
+  }
+
+  }
+
+
+
+
+
+
+
+
+
 .v-card {
     margin: 2px;
     padding: 2px;
@@ -204,7 +346,6 @@ export default {
     height: 150px;
     width: 150px;
 }
-
 
 /* The switch - the box around the slider */
 .switch {
@@ -277,7 +418,6 @@ input:checked+.slider:before {
     background: #16171d ;
   color: #fff;
 }
-
 
 </style>
     

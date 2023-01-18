@@ -1,4 +1,5 @@
 <template>
+    <div class="desktopView">
 <div class="login">
     <div class="greetingPanel">
         <div class="greeting">
@@ -13,6 +14,14 @@
         This is a product demo by Alisa Elin Mach, Nino-Julian Müller, Maarten Pohle and Vanessa Thörner for the Fachhochschule Wedel.
     </div>
 </div>
+</div>
+
+<div class="mobileView"><div class="login">
+    <div class="loginContainer">
+        <h1>CAMPUSPLANER</h1>
+        <CampusLogin/>
+    </div>
+</div></div>
 </template>
 
 <script>
@@ -24,8 +33,34 @@ export default {
 }
 </script>
 
+
+
+
 <style scoped>
-    .login {
+
+@media (max-width: 700px) {
+  .desktopView{
+    visibility: hidden;
+  }
+
+  .login {
+        background-image: linear-gradient(to right, rgb(78, 145, 150) , rgb(112, 187, 192));
+        display: flex;
+    position: fixed;
+    }
+
+    
+}
+
+
+
+@media (min-width: 701px) {
+  .mobileView{
+    visibility: hidden;
+
+    
+  }
+  .login {
         position: absolute;
         top: 0px;
         bottom: 0px;
@@ -37,6 +72,21 @@ export default {
         display: flex;
         flex-direction: row;
     }
+
+    .loginContainer {
+        font-family: "Barlow-SemiBold", Helvetica, Arial;
+        width: 35%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 150px;
+    }
+  }
+
+
+
+
 
     .greetingPanel {
         width: 65%;
