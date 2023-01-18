@@ -52,32 +52,6 @@
             }
         },
         {
-            "id": "105689",
-            "password": "nino",
-            "studentData": {
-                "name": {
-                    "firstName": "Nino-Julian",
-                    "lastName": "Müller"
-                },
-                "info": {
-                    "birthday": "Nino",
-                    "adress": "Hafenstraße 32",
-                    "email": "njm@gmail.de",
-                    "phone": "0160 2525238",
-                    "loginDate": "01.01.2023",
-                    "studyBegin": "01.04.2021",
-                    "studyTopic": "Medieninformatik",
-                    "studyType": "Vollzeit",
-                    "actualSemester": "6",
-                    "matNumber": "105688",
-                    "studyMail": "minf105688@stud.fh-wedel.de"
-                },
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
-        },
-        {
             "id": "104588",
             "password": "vanessa",
             "studentData": {
@@ -165,16 +139,7 @@
             }
         },
         {
-            "id": "104666",
-            "password": "maarten",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
-        },
-        {
-            "id": "12345",
+            "id": "123456",
             "password": "ole",
             "studentData": {
                 "name": {
@@ -228,81 +193,6 @@
                         "time": 1676156400000
                     }
                 ]
-            }
-        },
-        {
-            "id": "12345",
-            "password": "ole",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
-        },
-        {
-            "id": "12345",
-            "password": "ole",
-            "studentData": {
-                "name": {
-                    "firstName": "Ole",
-                    "lastName": "Nass"
-                },
-                "info": {
-                    "birthday": "01.01.1999",
-                    "adress": "Seeweg",
-                    "email": "ona@web.de",
-                    "phone": "0160 4161165",
-                    "loginDate": "01.01.2023",
-                    "studyBegin": "01.04.2020",
-                    "studyTopic": "Medieninformatik",
-                    "studyType": "Vollzeit",
-                    "actualSemester": "7",
-                    "matNumber": "minf12345",
-                    "studyMail": "minf12345@stud-fh-wedel.de"
-                },
-                "courses": [
-                    1,
-                    9,
-                    10
-                ],
-                "calendar": [
-                    {
-                        "timestamp": 22,
-                        "title": "Unwichtiger Termin",
-                        "descriptions": "Coole Beschreibung"
-                    },
-                    {
-                        "timestamp": 2222,
-                        "title": "Wichtiger Termin",
-                        "descriptions": "Coolere Beschreibung"
-                    }
-                ],
-                "todos": [
-                    {
-                        "text": "Alle mit 1.0 bewerten",
-                        "checked": false,
-                        "time": 1675810800000
-                    },
-                    {
-                        "text": "Klausur stellen",
-                        "checked": false,
-                        "time": 1676156400000
-                    },
-                    {
-                        "text": "Gastvortrag organisieren",
-                        "checked": true,
-                        "time": 1676156400000
-                    }
-                ]
-            }
-        },
-        {
-            "id": "104836",
-            "password": "casimir",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
             }
         },
         {
@@ -355,15 +245,6 @@
                         "time": 1676156400000
                     }
                 ]
-            }
-        },
-        {
-            "id": "104836",
-            "password": "casimir",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
             }
         },
         {
@@ -471,24 +352,6 @@
             }
         },
         {
-            "id": "105098",
-            "password": "robin",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
-        },
-        {
-            "id": "105098",
-            "password": "robin",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
-        },
-        {
             "id": "104962",
             "password": "jonathan",
             "studentData": {
@@ -538,15 +401,6 @@
                         "time": 1676156400000
                     }
                 ]
-            }
-        },
-        {
-            "id": "104962",
-            "password": "jonathan",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
             }
         }
     ]

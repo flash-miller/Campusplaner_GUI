@@ -9,7 +9,7 @@
 
             <ul id="ss_elem_list" role="listbox" aria-labelledby="ss_elem">
               <v-card v-for="course in getCoursesByStudent()">
-                <li id="ss_elem_Np" role="option">
+                <li id="ss_elem_Np" role="option" @click="setSelectedCourse(course.id)">
                   <v-row no-gutters>
                     <v-col cols="11" md="11" sm="11">
                       <p class="header">{{ course.name }}</p>
@@ -28,7 +28,7 @@
       </v-card>
     </v-col>
     <v-col cols="7" md="7" sm="12">
-      <CourseDetail :courseId="courseId" />
+      <CourseDetail :courseId="selectedCourse" :key="redrawKey"/>
     </v-col>
   </v-row>
 
@@ -41,9 +41,8 @@ import CourseDetail from "../components/CourseDetailComponent.vue";
 export default {
   data() {
     return {
-      passedData: {
-        courseId: "1"
-      }
+      selectedCourse: 0,
+      redrawKey: 0
     }
   },
   components: {
@@ -66,6 +65,13 @@ export default {
       });
 
       return studentCourses;
+    },
+    setSelectedCourse(id) {
+      this.selectedCourse = id;
+      this.rerender();
+    },
+    rerender() {
+      this.redrawKey += 1;
     }
   }
 }
