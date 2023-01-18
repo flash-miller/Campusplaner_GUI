@@ -34,6 +34,26 @@
             "id": 6,
             "name": "Übung Exploritory Data Analysis",
             "calendar": []
+        },
+        {
+            "id": 7,
+            "name": "Compositing Projekt",
+            "calendar": []
+        },
+        {
+            "id": 8,
+            "name": "Mobile Commerce",
+            "calendar": []
+        },
+        {
+            "id": 9,
+            "name": "User Experience",
+            "calendar": []
+        },
+        {
+            "id": 10,
+            "name": "Mediengestaltung",
+            "calendar": []
         }
     ]
 }
