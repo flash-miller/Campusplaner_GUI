@@ -1,56 +1,34 @@
 <template>
   <v-row no-gutters>
-    <v-col cols="7" md="7" sm="12">
+    <v-col cols="5" md="5" sm="12">
       <v-card>
         <div class="about">
-
           <h1>Deine Kursübersicht</h1>
           <div class="listbox-area">
-            <div>
-              <input type="search" id="search" placeholder="Suche…" />
+            <input type="search" id="search" placeholder="Suche…" />
 
-              <ul id="ss_elem_list" role="listbox" aria-labelledby="ss_elem">
-                <v-card v-for="course in getStudentCourses()">
-                  <li id="ss_elem_Np" role="option">
-                    {{ course }}
-                  </li>
-                </v-card>
-
-              </ul>
-            </div>
+            <ul id="ss_elem_list" role="listbox" aria-labelledby="ss_elem">
+              <v-card v-for="course in getCoursesByStudent()">
+                <li id="ss_elem_Np" role="option">
+                  <v-row no-gutters>
+                    <v-col cols="11" md="11" sm="11">
+                      <p class="header">{{ course.name }}</p>
+                      <p class="infoText">{{ course.dozent }}</p>
+                      <p class="infoText">{{ course.period }}</p>
+                    </v-col>
+                    <v-col>
+                      <p class="arrow">></p>
+                    </v-col>
+                  </v-row>
+                </li>
+              </v-card>
+            </ul>
           </div>
         </div>
       </v-card>
     </v-col>
-    <v-col cols="5" md="5" sm="12">
-      <v-card outlined tile>
-        <h2>Systemnahe Programmierung</h2>
-        <p>Christian Uhlig</p>
-        <p>Mittwoch 8:00-9:15 Uhr</p>
-        <p>Klausur</p>
-        <br>
-        <p>zusätzliche Übung</p>
-        <p>ÜBUNG SYSTEMNAHE PROGRAMMIERUNG</p>
-        <p>Übung ist vorbedingung für weitere Module!</p>
-        <br>
-        <h2>BENACHRICHTIGUNGEN</h2>
-        <div class="termin">
-          <p>SYSTEMNAHE PROGRAMMIERUNG</p>
-          <p>HEUTE</p>
-        </div>
-        <div class="termin">
-          <p>Das Tutorium findet heute ab 15:30 Uhr in HS01 statt.</p>
-          <p>11:45</p>
-        </div>
-        <br>
-
-
-        <p>SYSTEMNAHE PROGRAMMIERUNG</p>
-        <p>Die Ergebnisse der Nachbereitung vom letzten Mittwoch stehen zur Verfügung. Es geht um dne Vorlesungsteil 4
-          “Listenstrukturen”.</p>
-          <br>
-        <h2>VORLESUNGSMATERIALEN</h2>
-      </v-card>
+    <v-col cols="7" md="7" sm="12">
+      <CourseDetail :courseId="courseId" />
     </v-col>
   </v-row>
 
@@ -58,10 +36,36 @@
 
 <script>
 import store from "../store";
+import CourseDetail from "../components/CourseDetailComponent.vue";
+
 export default {
+  data() {
+    return {
+      passedData: {
+        courseId: "1"
+      }
+    }
+  },
+  components: {
+    CourseDetail,
+  },
   methods: {
     getStudentCourses() {
       return store.getters.getStudentCourses;
+    },
+    getCoursesByStudent() {
+      const sCourses = store.getters.getStudentCourses;
+      const allCourses = store.getters.getCourse;
+
+      let studentCourses = [];
+      sCourses.forEach((id) => {
+        allCourses.forEach((c) => {
+          if (c.id == id)
+            studentCourses.push(c);
+        });
+      });
+
+      return studentCourses;
     }
   }
 }
@@ -69,24 +73,25 @@ export default {
 </script>
 
 <style>
+.arrow {
+  vertical-align: middle;
+}
 
 .termin {
   display: flex;
-    justify-content: space-between;
-    width: 100%;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .listbox-area {
-  padding: 15px;
-  border: 1px solid #aaa;
+  padding: 10px;
   border-radius: 19px;
-  background: #eee;
-  margin-right: 50%
+  background: #FFFFFF;
+  width: 100%
 }
 
 [role="listbox"] {
   min-height: 18em;
-  border: 1px solid #aaa;
   background: white;
 }
 
@@ -220,6 +225,15 @@ button[aria-disabled="true"] {
   clip: rect(1px, 1px, 1px, 1px);
   font-size: 14px;
   white-space: nowrap;
+}
+
+.header {
+  color: #1C2764;
+  text-transform: uppercase;
+}
+
+.infoText {
+  color: #A8A8A8;
 }
 </style>
 

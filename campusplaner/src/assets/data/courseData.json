@@ -3,56 +3,78 @@
         {
             "id": 0,
             "name": "Rechnernetze",
+            "dozent": "Ilja Kaleck",
+            "period": "Di. 17.00 - 18.15 Uhr",
             "calendar": []
         },
         {
             "id": 1,
             "name": "Technologien der Mediengestaltung und GUI-Programmierung",
+            "dozent": "Ole Nass",
+            "period": "Fr. 14.00 - 18.15 Uhr",
             "calendar": []
         },
         {
             "id": 2,
             "name": "Algorithmen und Datenstrukturen",
+            "dozent": "Christian Uhlig",
+            "period": "Mi. 9.30 - 10.45 Uhr",
             "calendar": []
         },
         {
             "id": 3,
             "name": "Systemnahe Programmierung",
+            "dozent": "Christian Uhlig",
+            "period": "Mi. 8.00 - 9.15 Uhr",
             "calendar": []
         },
         {
             "id": 4,
             "name": "Grundlagen Data Science",
+            "dozent": "Emre Kilic",
+            "period": "Sa. 9.30 - 15.15 Uhr",
             "calendar": []
         },
         {
             "id": 5,
             "name": "Exploritory Data Analysis",
+            "dozent": "Hendrik Annuth",
+            "period": "Mi. 8.00 - 9.15 Uhr",
             "calendar": []
         },
         {
             "id": 6,
             "name": "Übung Exploritory Data Analysis",
+            "dozent": "Marco Pawlowski",
+            "period": "Do. 17.00 - 18.15 Uhr",
             "calendar": []
         },
         {
             "id": 7,
             "name": "Compositing Projekt",
+            "dozent": "Hendrik Annuth",
+            "period": "Do. 9.30 - 12.15 Uhr",
             "calendar": []
         },
         {
             "id": 8,
             "name": "Mobile Commerce",
+            "dozent": "Florian Hermsdorf, Paul Maria Bartusch",
+            "period": "Fr. 8.00 - 12.15 Uhr",
             "calendar": []
         },
         {
             "id": 9,
             "name": "User Experience",
+            "dozent": "Kristina Zöllner, Andreas Wand",
+            "period": "Fr. 8.00 - 12.15 Uhr",
             "calendar": []
         },
         {
             "id": 10,
             "name": "Mediengestaltung",
+            "dozent": "Michael Loft",
+            "period": "Di. 9.30 - 12.15 Uhr",
             "calendar": []
         }
     ]

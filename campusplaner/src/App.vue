@@ -72,11 +72,11 @@ export default {
   font-size: 9px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: #1C2764;
+  text-transform: uppercase;
 }
 h3 {
-  color: #1C2764;
   font-size: 20px;
 }
 

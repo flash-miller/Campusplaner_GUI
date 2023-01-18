@@ -109,6 +109,7 @@ div {
 
 .notification-header {
     color: #1C2764;
+    text-transform: uppercase;
 }
 
 .notification-body {
