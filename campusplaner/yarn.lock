@@ -6505,6 +6505,13 @@ vue@^3.2.13:
     "@vue/server-renderer" "3.2.45"
     "@vue/shared" "3.2.45"
 
+"vue3-datepicker@^0.3.4":
+  "integrity" "sha512-pD4Lixnqdr6KeIO/ZK/xdmhYDQUvMPHgTeWkNYeAx5sKY4eaNItOqbLuevwI51d3ubozhNS1y+Z8Enxi33pXiQ=="
+  "resolved" "https://registry.npmjs.org/vue3-datepicker/-/vue3-datepicker-0.3.4.tgz"
+  "version" "0.3.4"
+  dependencies:
+    "date-fns" "^2.22.1"
+
 vuetify@^3.0.0-beta.0:
   version "3.0.6"
   resolved "https://registry.npmjs.org/vuetify/-/vuetify-3.0.6.tgz"

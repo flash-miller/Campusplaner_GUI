@@ -21,8 +21,7 @@
             </v-row>
             <v-img class="notification" :src="require('@/assets/images/icons/notification icon.png')"
                 @click="navigate('notifications')" />
-            <v-img class="notification" :src="require('@/assets/images/icons/notification icon.png')"
-                @click="navigate('settings')" />
+            <v-icon color="white" @click="navigate('settings')">mdi-cog</v-icon>
         </v-row>
     </v-container>
 </template>
@@ -83,6 +82,7 @@ export default {
     filter: brightness(10);
     max-width: 25px;
     margin-left: 30px;
+    margin-right: 25px;
 }
 
 .notification:hover {
