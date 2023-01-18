@@ -1,46 +1,28 @@
 <template>
     <v-container class="navigationContainer">
         <v-row class="navigationRow">
-            <v-img
-                class="fhwLogo"
-                :src="require('@/assets/images/fhw icon.png')"
-                @click="navigate('home')"
-            />
+            <v-img class="fhwLogo" :src="require('@/assets/images/fhw icon.png')" @click="navigate('home')" />
             <v-row class="navigation">
-                <div
-                    class="navigationEntry"
-                    :class="{ active: isCurrentPage('calendar') }"
-                    @click="navigate('calendar')"
-                >
+                <div class="navigationEntry" :class="{ active: isCurrentPage('calendar') }"
+                    @click="navigate('calendar')">
                     <h1>MEIN KALENDER</h1>
                 </div>
-                <div
-                    class="navigationEntry"
-                    :class="{ active: isCurrentPage('university') }"
-                    @click="navigate('university')"
-                >
+                <div class="navigationEntry" :class="{ active: isCurrentPage('university') }"
+                    @click="navigate('university')">
                     <h1>MEINE HOCHSCHULE</h1>
                 </div>
-                <div
-                    class="navigationEntry"
-                    :class="{ active: isCurrentPage('courses') }"
-                    @click="navigate('courses')"
-                >
+                <div class="navigationEntry" :class="{ active: isCurrentPage('courses') }" @click="navigate('courses')">
                     <h1>MEINE KURSÜBERSICHT</h1>
                 </div>
-                <div
-                    class="navigationEntry"
-                    :class="{ active: isCurrentPage('education') }"
-                    @click="navigate('education')"
-                >
+                <div class="navigationEntry" :class="{ active: isCurrentPage('education') }"
+                    @click="navigate('education')">
                     <h1>MEIN STUDIUM</h1>
                 </div>
             </v-row>
-            <v-img
-                class="notification"
-                :src="require('@/assets/images/icons/notification icon.png')"
-                @click="navigate('notifications')"
-            />
+            <v-img class="notification" :src="require('@/assets/images/icons/notification icon.png')"
+                @click="navigate('notifications')" />
+            <v-img class="notification" :src="require('@/assets/images/icons/notification icon.png')"
+                @click="navigate('settings')" />
         </v-row>
     </v-container>
 </template>
@@ -68,6 +50,7 @@ export default {
 .v-row {
     margin: 0;
 }
+
 .navigationContainer {
     max-width: none;
     width: 100%;
@@ -115,7 +98,7 @@ export default {
 .navigationEntry h1 {
     font-size: 18px;
     color: white;
-        font-family: "Barlow", Helvetica, Arial;
+    font-family: "Barlow", Helvetica, Arial;
     margin: 0 25px 0 25px;
 }
 

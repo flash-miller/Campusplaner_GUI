@@ -72,8 +72,16 @@ export default {
   font-size: 9px;
 }
 
+h1, h2 {
+  color: #1C2764;
+}
 h3 {
   color: #1C2764;
   font-size: 20px;
+}
+
+.v-card {
+    margin: 2px;
+    padding: 2px;
 }
 </style>      
