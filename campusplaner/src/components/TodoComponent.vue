@@ -82,6 +82,7 @@
                 <Datepicker
                     class="datePickerInput"
                     v-model="todo.time"
+                    :style="{'--vdp-hover-bg-color': '#1C2764', '--vdp-selected-bg-color': '#1C2764', '--vdp-text-color': '#1C2764'}"
                 />
             </v-col>
             <v-col
