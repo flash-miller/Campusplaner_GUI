@@ -27,6 +27,18 @@
         <br>
         <h2>VORLESUNGSMATERIALEN</h2>
         <h1>{{ course-Id }}</h1>
+        <ol>
+          <div class="gray"><li>Script01</li> </div>
+        
+        <li>Übungsbogen01</li>
+        <div class="gray"><li>Script02</li></div>
+        
+        <div class="gray"></div>
+        <li>Script03</li>
+        <div class="gray"> <li>Übungsbogen02</li></div>
+       
+        <li>Script04</li>
+        </ol>
       </v-card>
 </template>
 
@@ -37,4 +49,7 @@ export default {
 </script>
 
 <style>
+.gray{
+  background-color: gray;
+}
 </style>

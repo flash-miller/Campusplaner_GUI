@@ -60,6 +60,7 @@ export default {
 @font-face {
   font-family: "Barlow-Light";
   src: local("Barlow"),   url(./assets/fonts/Barlow-Light.ttf) format("truetype");
+
 }
 
 .viewWrapper {
@@ -83,5 +84,10 @@ h3 {
 .v-card {
     margin: 2px;
     padding: 2px;
+}
+
+.dark {
+  background: #16171d;
+  color: #fff;
 }
 </style>      

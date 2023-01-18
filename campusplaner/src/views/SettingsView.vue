@@ -74,9 +74,9 @@
             <v-card outlined tile>
                 <h2>Einstellungen</h2>
                 <div class="info">
-                    <p>Darkmode </p>
+                    <p>Darkmode {{ isDark }}</p>
                     <label class="switch">
-                        <input type="checkbox" onclick="darkmode()">
+                        <input type="checkbox" @click="toggleDark()">
                         <span class="slider round"></span>
                     </label>
                 </div>
@@ -178,6 +178,13 @@ export default {
 
 </script>
 
+<script setup>
+import { useDark, useToggle } from "@vueuse/core";
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+</script>
+
 <style>
 .v-card {
     margin: 2px;
@@ -264,14 +271,16 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-.dark-mode {
-    background-color: black;
-    color: white;
+.dark {
+  background: #16171d;
+  color: #fff;
 }
 
 .font-size {
     font-size: large;
 }
+
+
 </style>
     
 
