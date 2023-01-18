@@ -5,6 +5,7 @@ export default createStore({
   state: {
     studentData: {},
     notificationData: {},
+    courseData: {},
     isLoggedIn: false
   },
   getters: {
@@ -31,6 +32,9 @@ export default createStore({
     },
     getInfo(state){
       return state.studentData.info;
+    },
+    getCourse(state){
+      return state.courseData.courses;
     }
   },
   mutations: {
@@ -40,6 +44,9 @@ export default createStore({
     },
     setNotificationData(state, payload){
       state.notificationData = payload;
+    },
+    setCourseData(state, payload){
+      state.courseData = payload;
     },
     logout(state){
       state.studentData = {};
@@ -51,6 +58,7 @@ export default createStore({
       // Load student data json
       const studentData = require('./../assets/data/studentData.json');
       const notificationData = require('./../assets/data/notificationData.json');
+      const courseData = require('./../assets/data/courseData.json');
 
       const matchedUser = studentData.students.find(e => {
         return e.id === payload.userName;
@@ -69,6 +77,7 @@ export default createStore({
       // Set user information
       commit('setStudentData', matchedUser.studentData);
       commit('setNotificationData', notificationData);
+      commit('setCourseData', courseData);
     },
     logout({commit}) {
       commit('logout');

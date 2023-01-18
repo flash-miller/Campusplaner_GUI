@@ -4,6 +4,36 @@
             "id": 0,
             "name": "Rechnernetze",
             "calendar": []
+        },
+        {
+            "id": 1,
+            "name": "Technologien der Mediengestaltung und GUI-Programmierung",
+            "calendar": []
+        },
+        {
+            "id": 2,
+            "name": "Algorithmen und Datenstrukturen",
+            "calendar": []
+        },
+        {
+            "id": 3,
+            "name": "Systemnahe Programmierung",
+            "calendar": []
+        },
+        {
+            "id": 4,
+            "name": "Grundlagen Data Science",
+            "calendar": []
+        },
+        {
+            "id": 5,
+            "name": "Exploritory Data Analysis",
+            "calendar": []
+        },
+        {
+            "id": 6,
+            "name": "Übung Exploritory Data Analysis",
+            "calendar": []
         }
     ]
 }

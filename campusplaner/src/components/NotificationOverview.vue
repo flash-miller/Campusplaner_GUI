@@ -1,46 +1,41 @@
 <template>
-    <div>
-        <v-img class="tv-info" :src="require('@/assets/images/tv_info.jpg')" />
+    <div id="tv-img-div">
+        <v-img class="tv-info" :src="require('@/assets/images/tv_info.jpg')" alt="TV-Information Picture" />
     </div>
     <div>
         <h3>BENACHRICHTIGUNGEN</h3>
         <v-row no-gutters>
             <v-col cols="6" md="6" sm="12">
-                <v-card>
+                <v-card class="notification-box">
                     <p>HOCHSCHULE</p>
-                    <v-card 
-                        v-for = "notification in getNotifications()"
-                    >
-                        <p class="notification-header">{{ notification.headline }}</p>
-                        <p class="notification-body">{{ notification.text }}</p>
+                    <v-card class="notification" v-for="notification in getHoNotifications()">
+                        <v-row no-gutters>
+                            <v-col cols="9" md="9" sm="9">
+                                <p class="notification-header">{{ notification.headline }}</p>
+                                <p class="notification-body">{{ notification.text }}</p>
+                            </v-col>
+                            <v-col cols="3" md="3" sm="3">
+                                <p class="notification-body tx-r">{{ notification.date }}</p>
+                            </v-col>
+                        </v-row>
+
                     </v-card>
                     <p class="more">Weitere...</p>
                 </v-card>
             </v-col>
             <v-col cols="6" md="6" sm="12">
-                <v-card>
+                <v-card class="notification-box">
                     <p>DOZENTEN</p>
-                    <v-card>
-                        <p class="notification-header">Systemnahe Programmierung</p>
-                        <p class="notification-body">Das Tutorium findet heute ab 15:30 Uhr in HS01 statt.</p>
-                    </v-card>
-                    <hr />
-                    <v-card>
-                        <p class="notification-header">Data Science</p>
-                        <p class="notification-body">Für alle die am Samstag gefehlt haben, wiederhole ich nochmal die
-                            Praxisbeisp...</p>
-                    </v-card>
-                    <hr />
-                    <v-card>
-                        <p class="notification-header">Übung Explority Data Analysis</p>
-                        <p class="notification-body">Die Abnhame für Aufgabe 02 werden am Mittwoch um 11 Uhr
-                            stattfinden.</p>
-                    </v-card>
-                    <hr />
-                    <v-card>
-                        <p class="notification-header">Systemnahe Programmierung</p>
-                        <p class="notification-body">Die Ergebnisse der Nachbereitung vom letzten Mittwoch stehen zur
-                            Verfügung.</p>
+                    <v-card class="notification" v-for="notification in getCoursesByStudent()">
+                        <v-row no-gutters>
+                            <v-col cols="9" md="9" sm="9">
+                                <p class="notification-header">{{ notification.headline }}</p>
+                                <p class="notification-body">{{ notification.text }}</p>
+                            </v-col>
+                            <v-col cols="3" md="3" sm="3">
+                                <p class="notification-body tx-r">{{ notification.date }}</p>
+                            </v-col>
+                        </v-row>
                     </v-card>
                     <p class="more">Weitere...</p>
                 </v-card>
@@ -50,20 +45,66 @@
 </template>
 
 <script>
+import { _ } from "ajv";
 import store from "../store";
 
 export default {
     methods: {
-        getNotifications() {
-            return store.getters.getNotifications;
+        getHoNotifications() {
+            const notifications = store.getters.getNotifications;
+            return notifications.filter(function (n) {
+                return n.type == 'H';
+            }).slice(0, 4)
+        },
+        getDoNotifications() {
+            const notifications = store.getters.getNotifications;
+            return notifications.filter(function (n) {
+                return n.type == 'D';
+            })
+        },
+        getCoursesByStudent() {
+            const sCourses = store.getters.getStudentCourses;
+            const notifications = this.getDoNotifications();
+
+            let myCoursesNotifications = [];
+
+            sCourses.forEach((id) => {
+                notifications.forEach((n) => {
+                    if (n.courseId == id)
+                        myCoursesNotifications.push(n);
+                });
+            });
+
+            return myCoursesNotifications.slice(0, 4);
         }
     }
 }
 </script>
 
 <style>
+#tv-img-div {
+    margin-bottom: 20px;
+}
+
+div {
+    margin-bottom: 2px;
+}
+
 .tv-info {
     width: 698px;
+    margin: 5px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid #A8A8A8;
+}
+
+.notification-box {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.notification {
+    margin: 2px;
+    padding: 2px;
 }
 
 .notification-header {
@@ -72,6 +113,10 @@ export default {
 
 .notification-body {
     color: #A8A8A8;
+}
+
+.tx-r {
+    text-align: right;
 }
 
 .more {
