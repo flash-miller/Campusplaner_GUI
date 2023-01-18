@@ -26,7 +26,7 @@
       “Listenstrukturen”.</p>
     <br>
     <h2>VORLESUNGSMATERIALEN</h2>
-    <h1>{{ course- Id }}</h1>
+    <h1>{{ course-Id }}</h1>
     <ul>
       <div class="gray">
         <v-img class="icon" :src="require('@/assets/papericon.png')" />
