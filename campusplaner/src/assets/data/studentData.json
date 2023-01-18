@@ -52,32 +52,6 @@
             }
         },
         {
-            "id": "105689",
-            "password": "nino",
-            "studentData": {
-                "name": {
-                    "firstName": "Nino-Julian",
-                    "lastName": "Müller"
-                },
-                "info": {
-                    "birthday": "Nino",
-                    "adress": "Hafenstraße 32",
-                    "email": "njm@gmail.de",
-                    "phone": "0160 2525238",
-                    "loginDate": "01.01.2023",
-                    "studyBegin": "01.04.2021",
-                    "studyTopic": "Medieninformatik",
-                    "studyType": "Vollzeit",
-                    "actualSemester": "6",
-                    "matNumber": "105688",
-                    "studyMail": "minf105688@stud.fh-wedel.de"
-                },
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
-        },
-        {
             "id": "104588",
             "password": "vanessa",
             "studentData": {
@@ -222,7 +196,6 @@
                 ]
             }
         },
-
         {
             "id": "104836",
             "password": "casimir",
@@ -275,7 +248,6 @@
                 ]
             }
         },
-       
         {
             "id": "105835",
             "password": "steffen",
