@@ -127,10 +127,10 @@ export default {
     methods: {
         darkmode() {
             var element = document.querySelector('main');
-            var element2 = document.querySelector('.v-card');
+            var element2 = document.querySelectorAll('.v-card');
             element.classList.toggle("dark-mode");
             element2.classList.toggle("dark-mode");
-          
+         
         },
 
         fontsize() {
