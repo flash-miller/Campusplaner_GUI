@@ -65,6 +65,7 @@ export default {
 
 .viewWrapper {
   padding: 25px 200px 0 200px;
+  
 }
 
 .logoutButton {
@@ -84,10 +85,12 @@ h3 {
 .v-card {
     margin: 2px;
     padding: 2px;
+  
 }
 
-.dark {
-  background: #16171d;
+.dark-mode {
+    background-color: #16171d;
   color: #fff;
 }
+
 </style>      

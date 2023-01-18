@@ -21,45 +21,45 @@
         <br>
 
 
-        <p>{{ course.name }}</p>
+        <p>SYSTEMNAHE PROGRAMMIERUNG</p>
         <p>Die Ergebnisse der Nachbereitung vom letzten Mittwoch stehen zur Verfügung. Es geht um dne Vorlesungsteil 4
             “Listenstrukturen”.</p>
         <br>
         <h2>VORLESUNGSMATERIALEN</h2>
+        <h1>{{ course- Id }}</h1>
+            <ul>
+                <div class="gray">
+                    <v-img class="icon" :src="require('@/assets/papericon.png')" />
+                    <li>Script01</li>
+                    <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
+                </div>
+                <div class="white"> <v-img class="icon" :src="require('@/assets/papericon.png')" />
+                    <li>Übungsbogen01</li>
+                    <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
+                </div>
 
-        <ul>
-            <div class="gray">
-                <v-img class="icon" :src="require('@/assets/papericon.png')" />
-                <li>Script01</li>
-                <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
-            </div>
-            <div class="white"> <v-img class="icon" :src="require('@/assets/papericon.png')" />
-                <li>Übungsbogen01</li>
-                <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
-            </div>
+                <div class="gray">
+                    <v-img class="icon" :src="require('@/assets/papericon.png')" />
+                    <li>Script02</li>
+                    <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
+                </div>
+                <div class="white"> <v-img class="icon" :src="require('@/assets/papericon.png')" />
+                    <li>Script03</li>
+                    <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
+                </div>
 
-            <div class="gray">
-                <v-img class="icon" :src="require('@/assets/papericon.png')" />
-                <li>Script02</li>
-                <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
-            </div>
-            <div class="white"> <v-img class="icon" :src="require('@/assets/papericon.png')" />
-                <li>Script03</li>
-                <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
-            </div>
+                <div class="gray">
+                    <v-img class="icon" :src="require('@/assets/papericon.png')" />
+                    <li>Übungsbogen02</li>
+                    <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
+                </div>
 
-            <div class="gray">
-                <v-img class="icon" :src="require('@/assets/papericon.png')" />
-                <li>Übungsbogen02</li>
-                <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
-            </div>
+                <div class="white"> <v-img class="icon" :src="require('@/assets/papericon.png')" />
+                    <li>Script04</li>
+                    <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
+                </div>
 
-            <div class="white"> <v-img class="icon" :src="require('@/assets/papericon.png')" />
-                <li>Script04</li>
-                <v-img class="icon" :src="require('@/assets/cloudicon.png')" />
-            </div>
-
-        </ul>
+            </ul>
     </v-card>
 </template>
 

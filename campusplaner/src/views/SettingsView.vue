@@ -76,7 +76,7 @@
                 <div class="info">
                     <p>Darkmode {{ isDark }}</p>
                     <label class="switch">
-                        <input type="checkbox" @click="toggleDark()">
+                        <input type="checkbox" @click="darkmode()">
                         <span class="slider round"></span>
                     </label>
                 </div>
@@ -84,7 +84,7 @@
                 <div class="info">
                     <p>Schrift vergrößern</p>
                     <label class="switch">
-                        <input type="checkbox" onclick="fontsize()">
+                        <input type="checkbox" @click="fontsize()">
                         <span class="slider round"></span>
                     </label>
                 </div>
@@ -122,15 +122,19 @@
 
 <script>
 import store from "../store";
+
 export default {
     methods: {
         darkmode() {
-            var element = document.body;
+            var element = document.querySelector('main');
+            var element2 = document.querySelectorAll('');
             element.classList.toggle("dark-mode");
+            element2.classList.toggle("dark-mode");
+         
         },
 
         fontsize() {
-            var element = document.body;
+            var element = document.querySelector('main');
             element.classList.toggle("font-size");
         },
         getFirstName() {
@@ -178,12 +182,6 @@ export default {
 
 </script>
 
-<script setup>
-import { useDark, useToggle } from "@vueuse/core";
-
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
-</script>
 
 <style>
 .v-card {
@@ -271,13 +269,13 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-.dark {
-  background: #16171d;
-  color: #fff;
+.font-size {
+    font-size: x-large;
 }
 
-.font-size {
-    font-size: large;
+.dark-mode {
+    background: #16171d ;
+  color: #fff;
 }
 
 
