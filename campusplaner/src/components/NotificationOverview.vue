@@ -84,6 +84,7 @@ export default {
 <style>
 #tv-img-div {
     margin-bottom: 20px;
+    display: flex;
 }
 
 div {
