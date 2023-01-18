@@ -15,7 +15,7 @@
       md="5"
       sm="12"
     >
-      <v-card outlined tile>
+      <v-card outlined tile class="todoWrapper">
         <TodoComponent/>
       </v-card>
     </v-col>
@@ -44,3 +44,9 @@ export default defineComponent({
   }
 });
 </script>
+
+<style scoped>
+  .todoWrapper {
+    overflow: visible;
+  }
+</style>

@@ -34,6 +34,7 @@
                 <Datepicker
                     class="datePickerInput"
                     v-model="newTodoDate"
+                    :style="{'--vdp-hover-bg-color': '#1C2764', '--vdp-selected-bg-color': '#1C2764', '--vdp-text-color': '#1C2764'}"
                 />
             </v-col>
             <v-col
@@ -44,7 +45,7 @@
                     block
                     v-on:click="addNewTodo()"
                 >
-                    <v-icon>mdi-calendar-plus</v-icon>
+                    <v-icon color="#1C2764">mdi-calendar-plus</v-icon>
                 </v-btn>
             </v-col>
         </v-row>
@@ -91,7 +92,7 @@
                     block
                     v-on:click="removeTodo(i)"
                 >
-                    <v-icon>mdi-delete-outline</v-icon>
+                    <v-icon color="#1C2764">mdi-delete-outline</v-icon>
                 </v-btn>
             </v-col>
         </v-row>
