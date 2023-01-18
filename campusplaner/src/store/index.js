@@ -37,6 +37,12 @@ export default createStore({
     logout(state){
       state.studentData = {};
       state.isLoggedIn = false;
+    },
+    addTodo(state, payload) {
+      state.studentData.todos.unshift(payload);
+    },
+    removeTodo(state, payload) {
+      state.studentData.todos.splice(payload.index, 1);
     }
   },
   actions: {
@@ -66,6 +72,12 @@ export default createStore({
     },
     saveState({commit}){
       
+    },
+    addTodo({commit}, payload) {
+      commit('addTodo', payload);
+    },
+    removeTodo({commit}, payload) {
+      commit('removeTodo', payload);
     }
   },
   modules: {
