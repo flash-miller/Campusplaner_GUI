@@ -1,27 +1,32 @@
 <template>
     <div class="desktopView">
-<div class="login">
-    <div class="greetingPanel">
-        <div class="greeting">
-            IHRE NUMMER EINS LÖSUNG ZUM MANAGEN DER KOMMUNIKATION MIT IHREN LERNENDEN
+        <div class="login">
+            <div class="greetingPanel">
+                <div class="greeting">
+                    IHRE NUMMER EINS LÖSUNG ZUM MANAGEN DER KOMMUNIKATION MIT IHREN LERNENDEN
+                </div>
+            </div>
+            <div class="loginContainer">
+                <h1>CAMPUSPLANER</h1>
+                <CampusLogin />
+            </div>
+            <div class="footerInformation">
+                This is a product demo by Alisa Elin Mach, Nino-Julian Müller, Maarten Pohle and Vanessa Thörner for the
+                Fachhochschule Wedel.
+            </div>
         </div>
     </div>
-    <div class="loginContainer">
-        <h1>CAMPUSPLANER</h1>
-        <CampusLogin/>
-    </div>
-    <div class="footerInformation">
-        This is a product demo by Alisa Elin Mach, Nino-Julian Müller, Maarten Pohle and Vanessa Thörner for the Fachhochschule Wedel.
-    </div>
-</div>
-</div>
 
-<div class="mobileView"><div class="login">
-    <div class="loginContainer">
-        <h1>CAMPUSPLANER</h1>
-        <CampusLogin/>
+
+
+    <div class="mobileView">
+        <div class="login">
+            <div class="loginContainer">
+                <h1>CAMPUSPLANER</h1>
+                <CampusLogin />
+            </div>
+        </div>
     </div>
-</div></div>
 </template>
 
 <script>
@@ -37,37 +42,39 @@ export default {
 
 
 <style scoped>
-
 @media (max-width: 700px) {
-  .desktopView{
-    visibility: hidden;
-  }
 
-  .login {
-        background-image: linear-gradient(to right, rgb(78, 145, 150) , rgb(112, 187, 192));
-        display: flex;
-    position: fixed;
+    footer{
+        display: none;
+    }
+    .desktopView {
+        display: none;
     }
 
-    
+    .login {
+        background-image: linear-gradient(to right, rgb(78, 145, 150), rgb(112, 187, 192));
+        display: flex;
+        position: fixed;
+    }
+
+
 }
 
 
 
 @media (min-width: 701px) {
-  .mobileView{
-    visibility: hidden;
+    .mobileView {
+        display: none;
+    }
 
-    
-  }
-  .login {
+    .login {
         position: absolute;
         top: 0px;
         bottom: 0px;
         left: 0px;
         right: 0px;
-        
-        background-image: linear-gradient(to right, rgb(78, 145, 150) , rgb(112, 187, 192));
+
+        background-image: linear-gradient(to right, rgb(78, 145, 150), rgb(112, 187, 192));
         padding: 100px 150px 100px 150px;
         display: flex;
         flex-direction: row;
@@ -76,17 +83,12 @@ export default {
     .loginContainer {
         font-family: "Barlow-SemiBold", Helvetica, Arial;
         width: 35%;
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding-left: 150px;
     }
-  }
-
-
-
-
 
     .greetingPanel {
         width: 65%;
@@ -104,7 +106,7 @@ export default {
     .loginContainer {
         font-family: "Barlow-SemiBold", Helvetica, Arial;
         width: 35%;
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -124,4 +126,5 @@ export default {
         font-family: "Barlow-Light", Helvetica, Arial;
         font-size: 13px;
     }
+}
 </style>

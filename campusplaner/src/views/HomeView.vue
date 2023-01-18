@@ -28,8 +28,8 @@
   <v-row no-gutters>
     <v-col
       cols="17"
-      md="1"
-      sm="1"
+      md="10"
+      sm="10"
       >
       <v-card>
         <NotificationOverview />
@@ -39,9 +39,9 @@
       </v-card>
     </v-col>
     <v-col
-      cols="0"
-      md="0"
-      sm="0"
+      cols="5"
+      md="5"
+      sm="5"
     >
      
     </v-col>
@@ -76,7 +76,7 @@ export default defineComponent({
 
 @media (max-width: 700px) {
   .desktopView{
-    visibility: hidden;
+    display: none;
   }
 }
 
@@ -84,7 +84,7 @@ export default defineComponent({
 
 @media (min-width: 701px) {
   .mobileView{
-    visibility: hidden;
+    display: none;
   }
    .todoWrapper {
     overflow: visible;

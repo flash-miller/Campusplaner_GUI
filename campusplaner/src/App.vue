@@ -66,42 +66,33 @@ export default {
 
 @media (max-width: 700px) {
   .viewWrapper {
-    padding: 0px 0px 0;
+    padding: 1px 1px 1px;
   }
 
 }
 
-@media (min-width: 701px) {
-  .viewWrapper {
-    padding: 25px 200px 0;
 
-  }
+.viewWrapper {
+  padding: 15px 15px 15 15px;
 }
-
 .logoutButton {
   position: absolute;
   right: 25px;
   font-size: 9px;
 }
-
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   color: #1C2764;
   text-transform: uppercase;
 }
-
 h3 {
   font-size: 20px;
 }
-
 .v-card {
-  margin: 2px;
-  padding: 2px;
+    margin: 2px;
+    padding: 2px;
 }
-
 .dark-mode {
-  background-color: #16171d;
+    background-color: #16171d;
   color: #fff;
 }
 </style>      

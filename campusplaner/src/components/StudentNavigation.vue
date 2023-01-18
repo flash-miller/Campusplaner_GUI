@@ -52,7 +52,7 @@
                             @click="navigate('university')" /></v-col>
                     <v-col sm="2"> <v-img class="courses" :src="require('@/assets/images/icons/buchicon.png')"
                             @click="navigate('courses')" /></v-col>
-                    <v-col sm="2"> <v-img class="education" :src="require('@/assets/profilbilddefault.png')"
+                    <v-col sm="2"> <v-img class="education" :src="require('@/assets/images/icons/profilicon.png')"
                             @click="navigate('education')" /></v-col>
 
 
@@ -93,8 +93,7 @@ export default {
     }
 
     .desktopview {
-        visibility: hidden;
-        position: fixed;
+        display: none;
     }
 
 
@@ -204,75 +203,62 @@ export default {
 
 @media (min-width: 701px) {
     .mobileview {
-        visibility: hidden;
+        display: none;
     }
-
-
 
     .v-row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .navigationContainer {
-        max-width: none;
-        width: 100%;
-        height: 75px;
-        background-color: #1C2764;
-        padding: 0px 40px 0 30px;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .navigationRow {
-        align-items: center;
-    }
-
-    .fhwLogo {
-        width: 45px;
-        height: 45px;
-        max-width: 45px;
-    }
-
-    .fhwLogo:hover {
-        cursor: pointer;
-    }
-
-    .notification {
-        width: 25px;
-        height: 25px;
-        filter: brightness(10);
-        max-width: 25px;
-        margin-left: 30px;
-        margin-right: 25px;
-    }
-
-    .notification:hover {
-        cursor: pointer;
-    }
-
-    .navigation {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-    }
-
-    .navigationEntry h1 {
-        font-size: 18px;
-        color: white;
-        font-family: "Barlow", Helvetica, Arial;
-        margin: 0 25px 0 25px;
-    }
-
-    .navigationEntry h1:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
-
-    .navigationEntry.active h1 {
-        text-decoration: underline;
-    }
+    margin: 0;
+}
+.navigationContainer {
+    max-width: none;
+    width: 100%;
+    height: 75px;
+    background-color: #1C2764;
+    padding: 0px 40px 0 30px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigationRow {
+    align-items: center;
+}
+.fhwLogo {
+    width: 45px;
+    height: 45px;
+    max-width: 45px;
+}
+.fhwLogo:hover {
+    cursor: pointer;
+}
+.notification {
+    width: 25px;
+    height: 25px;
+    filter: brightness(10);
+    max-width: 25px;
+    margin-left: 30px;
+    margin-right: 25px;
+}
+.notification:hover {
+    cursor: pointer;
+}
+.navigation {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.navigationEntry h1 {
+    font-size: 18px;
+    color: white;
+    font-family: "Barlow", Helvetica, Arial;
+    margin: 0 25px 0 25px;
+}
+.navigationEntry h1:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.navigationEntry.active h1 {
+    text-decoration: underline;
+}
 }
 </style>

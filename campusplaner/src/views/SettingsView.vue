@@ -305,7 +305,7 @@ export default {
 
 @media (max-width: 700px) {
   .desktopView{
-    visibility: hidden;
+    display: none;
   }
 }
 
@@ -313,7 +313,7 @@ export default {
 
 @media (min-width: 701px) {
   .mobileView{
-    visibility: hidden;
+    display: none;
   }
 
   }
