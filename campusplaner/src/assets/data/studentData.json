@@ -111,7 +111,7 @@
         },
         {
             "id": "104666",
-            "password": "maartenistcool",
+            "password": "maarten",
             "studentData": {
                 "name": {
                     "firstName": "Maarten",
@@ -119,9 +119,9 @@
                 },
                 "info": {
                     "birthday": "25.01.2001",
-                    "adress": "Am Dorfteich",
+                    "adress": "Wilde Straße",
                     "email": "maartenp.jbs@gmx.de",
-                    "phone": "0160 4308282",
+                    "phone": "0160 6514165",
                     "loginDate": "01.01.2023",
                     "studyBegin": "01.04.2020",
                     "studyTopic": "Medieninformatik",
@@ -164,17 +164,9 @@
                 ]
             }
         },
+
         {
-            "id": "104666",
-            "password": "maarten",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
-        },
-        {
-            "id": "12345",
+            "id": "123456",
             "password": "ole",
             "studentData": {
                 "name": {
@@ -230,81 +222,7 @@
                 ]
             }
         },
-        {
-            "id": "12345",
-            "password": "ole",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
-        },
-        {
-            "id": "12345",
-            "password": "ole",
-            "studentData": {
-                "name": {
-                    "firstName": "Ole",
-                    "lastName": "Nass"
-                },
-                "info": {
-                    "birthday": "01.01.1999",
-                    "adress": "Seeweg",
-                    "email": "ona@web.de",
-                    "phone": "0160 4161165",
-                    "loginDate": "01.01.2023",
-                    "studyBegin": "01.04.2020",
-                    "studyTopic": "Medieninformatik",
-                    "studyType": "Vollzeit",
-                    "actualSemester": "7",
-                    "matNumber": "minf12345",
-                    "studyMail": "minf12345@stud-fh-wedel.de"
-                },
-                "courses": [
-                    1,
-                    9,
-                    10
-                ],
-                "calendar": [
-                    {
-                        "timestamp": 22,
-                        "title": "Unwichtiger Termin",
-                        "descriptions": "Coole Beschreibung"
-                    },
-                    {
-                        "timestamp": 2222,
-                        "title": "Wichtiger Termin",
-                        "descriptions": "Coolere Beschreibung"
-                    }
-                ],
-                "todos": [
-                    {
-                        "text": "Alle mit 1.0 bewerten",
-                        "checked": false,
-                        "time": 1675810800000
-                    },
-                    {
-                        "text": "Klausur stellen",
-                        "checked": false,
-                        "time": 1676156400000
-                    },
-                    {
-                        "text": "Gastvortrag organisieren",
-                        "checked": true,
-                        "time": 1676156400000
-                    }
-                ]
-            }
-        },
-        {
-            "id": "104836",
-            "password": "casimir",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
-        },
+
         {
             "id": "104836",
             "password": "casimir",
@@ -357,15 +275,7 @@
                 ]
             }
         },
-        {
-            "id": "104836",
-            "password": "casimir",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
-        },
+       
         {
             "id": "105835",
             "password": "steffen",
@@ -471,21 +381,55 @@
             }
         },
         {
-            "id": "105098",
-            "password": "robin",
+            "id": "104759",
+            "password": "alisa",
             "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
-        },
-        {
-            "id": "105098",
-            "password": "robin",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
+                "name": {
+                    "firstName": "Alisa Elin",
+                    "lastName": "Mach"
+                },
+                "info": {
+                    "birthday": "27.07.2000",
+                    "adress": "Seeweg",
+                    "email": "ael@web.de",
+                    "phone": "0160 9019840048",
+                    "loginDate": "01.01.2023",
+                    "studyBegin": "01.04.2020",
+                    "studyTopic": "Medieninformatik",
+                    "studyType": "Vollzeit",
+                    "actualSemester": "6",
+                    "matNumber": "minf104759",
+                    "studyMail": "minf104759@stud-fh-wedel.de"
+                },
+                "courses": [
+                    1,
+                    9,
+                    10
+                ],
+                "calendar": [
+                    {
+                        "timestamp": 22,
+                        "title": "Unwichtiger Termin",
+                        "descriptions": "Coole Beschreibung"
+                    },
+                    {
+                        "timestamp": 2222,
+                        "title": "Wichtiger Termin",
+                        "descriptions": "Coolere Beschreibung"
+                    }
+                ],
+                "todos": [
+                    {
+                        "text": "Für Klausuren anmelden",
+                        "checked": false,
+                        "time": 1675810800000
+                    },
+                    {
+                        "text": "Klausur bestehen",
+                        "checked": true,
+                        "time": 1676156400000
+                    }
+                ]
             }
         },
         {
@@ -539,15 +483,7 @@
                     }
                 ]
             }
-        },
-        {
-            "id": "104962",
-            "password": "jonathan",
-            "studentData": {
-                "courses": [],
-                "calendar": [],
-                "todos": []
-            }
         }
+       
     ]
 }

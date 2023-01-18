@@ -25,7 +25,7 @@
         </div>
         <div class="listbox-area">
             <input type="search" id="search" placeholder="Suche…" />
-
+            
             <ul id="ss_elem_list" role="listbox" aria-labelledby="ss_elem">
               <v-card v-for="course in getCoursesByStudent()">
                 <li id="ss_elem_Np" role="option">
@@ -89,7 +89,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style>
