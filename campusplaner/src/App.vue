@@ -67,6 +67,7 @@ export default {
 @media (max-width: 700px) {
   .viewWrapper {
     padding: 1px 1px 1px;
+    margin-bottom: 50px;
   }
 
 }
@@ -74,6 +75,7 @@ export default {
 
 .viewWrapper {
   padding: 15px 15px 15 15px;
+ 
 }
 .logoutButton {
   position: absolute;

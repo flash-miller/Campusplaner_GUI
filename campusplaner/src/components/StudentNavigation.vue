@@ -90,6 +90,7 @@ export default {
         position: absolute;
         bottom: 0px;
         width: 100%;
+       
     }
 
     .desktopview {

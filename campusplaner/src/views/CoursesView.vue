@@ -1,4 +1,5 @@
 <template>
+  <div class="desktopView">
   <v-row no-gutters>
     <v-col cols="5" md="5" sm="12">
       <v-card>
@@ -32,6 +33,49 @@
       <CourseDetail :courseId="selectedCourse" :key="redrawDetailsKey" />
     </v-col>
   </v-row>
+</div>
+
+<div class="mobileView">
+  <v-row no-gutters>
+    <v-col cols="15" md="5" sm="12">
+      <v-card>
+        <div class="about">
+          <h1>Deine Kursübersicht</h1>
+          <button id="btnAll" @click="clickBtnAll()">Alle</button>
+          <button id="btnActual" @click="clickBtnAcutal()">Laufende</button>
+          <div class="listbox-area" :key="redrawListKey">
+            <input type="search" id="search" placeholder="Suche…" />
+            <ul id="ss_elem_list" role="listbox" aria-labelledby="ss_elem">
+              <v-card v-for="course in getCourses()">
+                <li id="ss_elem_Np" role="option" @click="setSelectedCourse(course.id)">
+                  <v-row no-gutters>
+                    <v-col cols="11" md="11" sm="11">
+                      <p class="header">{{ course.name }}</p>
+                      <p class="infoText">{{ course.dozent }}</p>
+                      <p class="infoText">{{ course.period }}</p>
+                    </v-col>
+                    <v-col>
+                      <p class="arrow">></p>
+                    </v-col>
+                  </v-row>
+                </li>
+               
+              </v-card>
+            </ul>
+          </div>
+        </div>
+        <CourseDetail :courseId="selectedCourse" :key="redrawDetailsKey" />
+      </v-card>
+    </v-col>
+    <v-col cols="0" md="7" sm="12">
+      
+    </v-col>
+  </v-row>
+</div>
+
+
+
+
 
 </template>
 
@@ -109,7 +153,22 @@ export default {
 </script>
 
 <style>
-#btnAll {
+
+
+@media (max-width: 700px) {
+  .desktopView {
+    display: none;
+  }
+}
+
+
+
+@media (min-width: 701px) {
+  .mobileView {
+    display: none;
+  }
+
+  #btnAll {
   margin-left: 2px;
   margin-right: 2px;
 }
@@ -293,6 +352,11 @@ button[aria-disabled="true"] {
 .infoText {
   color: #A8A8A8;
 }
+}
+
+
+
+
 </style>
 
 
