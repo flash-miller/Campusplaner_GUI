@@ -5,6 +5,9 @@
             "name": "Rechnernetze",
             "dozent": "Ilja Kaleck",
             "period": "Di. 17.00 - 18.15 Uhr",
+            "examMethod": "Klausur",
+            "prerequirement": false,
+            "otherCourses": [],
             "calendar": []
         },
         {
@@ -12,6 +15,9 @@
             "name": "Technologien der Mediengestaltung und GUI-Programmierung",
             "dozent": "Ole Nass",
             "period": "Fr. 14.00 - 18.15 Uhr",
+            "examMethod": "Klausur",
+            "prerequirement": false,
+            "otherCourses": [],
             "calendar": []
         },
         {
@@ -19,6 +25,13 @@
             "name": "Algorithmen und Datenstrukturen",
             "dozent": "Christian Uhlig",
             "period": "Mi. 9.30 - 10.45 Uhr",
+            "examMethod": "Klausur",
+            "prerequirement": false,
+            "otherCourses": [
+                {
+                    "courseId": 11
+                }
+            ],
             "calendar": []
         },
         {
@@ -26,6 +39,13 @@
             "name": "Systemnahe Programmierung",
             "dozent": "Christian Uhlig",
             "period": "Mi. 8.00 - 9.15 Uhr",
+            "examMethod": "Klausur",
+            "prerequirement": false,
+            "otherCourses": [
+                {
+                    "courseId": 12
+                }
+            ],
             "calendar": []
         },
         {
@@ -33,6 +53,9 @@
             "name": "Grundlagen Data Science",
             "dozent": "Emre Kilic",
             "period": "Sa. 9.30 - 15.15 Uhr",
+            "examMethod": "Klausur",
+            "prerequirement": false,
+            "otherCourses": [],
             "calendar": []
         },
         {
@@ -40,6 +63,13 @@
             "name": "Exploritory Data Analysis",
             "dozent": "Hendrik Annuth",
             "period": "Mi. 8.00 - 9.15 Uhr",
+            "examMethod": "Klausur",
+            "prerequirement": false,
+            "otherCourses": [
+                {
+                    "courseId": 6
+                }
+            ],
             "calendar": []
         },
         {
@@ -47,6 +77,13 @@
             "name": "Übung Exploritory Data Analysis",
             "dozent": "Marco Pawlowski",
             "period": "Do. 17.00 - 18.15 Uhr",
+            "examMethod": "Abgaben",
+            "prerequirement": false,
+            "otherCourses": [
+                {
+                    "courseId": 5
+                }
+            ],
             "calendar": []
         },
         {
@@ -54,6 +91,9 @@
             "name": "Compositing Projekt",
             "dozent": "Hendrik Annuth",
             "period": "Do. 9.30 - 12.15 Uhr",
+            "examMethod": "Klausur",
+            "prerequirement": false,
+            "otherCourses": [],
             "calendar": []
         },
         {
@@ -61,6 +101,13 @@
             "name": "Mobile Commerce",
             "dozent": "Florian Hermsdorf, Paul Maria Bartusch",
             "period": "Fr. 8.00 - 12.15 Uhr",
+            "examMethod": "Klausur",
+            "prerequirement": false,
+            "otherCourses": [
+                {
+                    "courseId": 9
+                }
+            ],
             "calendar": []
         },
         {
@@ -68,6 +115,13 @@
             "name": "User Experience",
             "dozent": "Kristina Zöllner, Andreas Wand",
             "period": "Fr. 8.00 - 12.15 Uhr",
+            "examMethod": "Klausur",
+            "prerequirement": false,
+            "otherCourses": [
+                {
+                    "courseId": 8
+                }
+            ],
             "calendar": []
         },
         {
@@ -75,6 +129,37 @@
             "name": "Mediengestaltung",
             "dozent": "Michael Loft",
             "period": "Di. 9.30 - 12.15 Uhr",
+            "examMethod": "Klausur",
+            "prerequirement": false,
+            "otherCourses": [],
+            "calendar": []
+        },
+        {
+            "id": 11,
+            "name": "Übung Algorithmen und Datenstrukturen",
+            "dozent": "Christian Uhlig",
+            "period": "Mi. 9.30 - 10.45 Uhr",
+            "examMethod": "Abnahme",
+            "prerequirement": true,
+            "otherCourses": [
+                {
+                    "courseId": 2
+                }
+            ],
+            "calendar": []
+        },
+        {
+            "id": 12,
+            "name": "Übung Systemnahe Programmierung",
+            "dozent": "Christian Uhlig",
+            "period": "Mi. 8.00 - 9.15 Uhr",
+            "examMethod": "Klausur",
+            "prerequirement": true,
+            "otherCourses": [
+                {
+                    "courseId": 3
+                }
+            ],
             "calendar": []
         }
     ]

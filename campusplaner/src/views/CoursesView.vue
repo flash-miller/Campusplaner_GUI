@@ -4,11 +4,12 @@
       <v-card>
         <div class="about">
           <h1>Deine Kursübersicht</h1>
-          <div class="listbox-area">
+          <button id="btnAll" @click="clickBtnAll()">Alle</button>
+          <button id="btnActual" @click="clickBtnAcutal()">Laufende</button>
+          <div class="listbox-area" :key="redrawListKey">
             <input type="search" id="search" placeholder="Suche…" />
-
             <ul id="ss_elem_list" role="listbox" aria-labelledby="ss_elem">
-              <v-card v-for="course in getCoursesByStudent()">
+              <v-card v-for="course in getCourses()">
                 <li id="ss_elem_Np" role="option" @click="setSelectedCourse(course.id)">
                   <v-row no-gutters>
                     <v-col cols="11" md="11" sm="11">
@@ -28,7 +29,7 @@
       </v-card>
     </v-col>
     <v-col cols="7" md="7" sm="12">
-      <CourseDetail :courseId="selectedCourse" :key="redrawKey"/>
+      <CourseDetail :courseId="selectedCourse" :key="redrawDetailsKey" />
     </v-col>
   </v-row>
 
@@ -42,7 +43,9 @@ export default {
   data() {
     return {
       selectedCourse: 0,
-      redrawKey: 0
+      redrawDetailsKey: 0,
+      redrawListKey: 0,
+      allSelected: true
     }
   },
   components: {
@@ -52,9 +55,23 @@ export default {
     getStudentCourses() {
       return store.getters.getStudentCourses;
     },
-    getCoursesByStudent() {
-      const sCourses = store.getters.getStudentCourses;
+    getCourses() {
       const allCourses = store.getters.getCourse;
+
+      let result = [];
+      if (this.allSelected) {
+        allCourses.forEach(element => {
+          result.push(element);
+        });
+      }
+      else {
+        result = this.getCoursesByStudent(allCourses);
+      }
+
+      return result;
+    },
+    getCoursesByStudent(allCourses) {
+      const sCourses = store.getters.getStudentCourses;
 
       let studentCourses = [];
       sCourses.forEach((id) => {
@@ -68,10 +85,23 @@ export default {
     },
     setSelectedCourse(id) {
       this.selectedCourse = id;
-      this.rerender();
+      this.rerenderDetailsComponent();
     },
-    rerender() {
-      this.redrawKey += 1;
+    rerenderDetailsComponent() {
+      this.redrawDetailsKey += 1;
+    },
+    clickBtnAll() {
+      this.allSelected = true;
+      this.getCourses();
+      this.rerenderCourseList();
+    },
+    clickBtnAcutal() {
+      this.allSelected = false;
+      this.getCourses();
+      this.rerenderCourseList();
+    },
+    rerenderCourseList() {
+      this.redrawListKey += 1;
     }
   }
 }
@@ -79,6 +109,28 @@ export default {
 </script>
 
 <style>
+#btnAll {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+#btnAll:active {
+  color: #1C2764;
+}
+#btnAll:focus{
+  text-decoration: underline;
+}
+
+#btnActual {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+#btnActual:active {
+  color: #1C2764;
+}
+#btnActual:focus{
+  text-decoration: underline;
+}
+
 .arrow {
   vertical-align: middle;
 }

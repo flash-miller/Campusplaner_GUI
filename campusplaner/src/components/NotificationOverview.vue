@@ -9,16 +9,7 @@
                 <v-card class="notification-box">
                     <p>HOCHSCHULE</p>
                     <v-card class="notification" v-for="notification in getHoNotifications()">
-                        <v-row no-gutters>
-                            <v-col cols="9" md="9" sm="9">
-                                <p class="notification-header">{{ notification.headline }}</p>
-                                <p class="notification-body">{{ notification.text }}</p>
-                            </v-col>
-                            <v-col cols="3" md="3" sm="3">
-                                <p class="notification-body tx-r">{{ notification.date }}</p>
-                            </v-col>
-                        </v-row>
-
+                        <NotificationCard :notification="notification" />
                     </v-card>
                     <p class="more">Weitere...</p>
                 </v-card>
@@ -27,15 +18,7 @@
                 <v-card class="notification-box">
                     <p>DOZENTEN</p>
                     <v-card class="notification" v-for="notification in getCoursesByStudent()">
-                        <v-row no-gutters>
-                            <v-col cols="9" md="9" sm="9">
-                                <p class="notification-header">{{ notification.headline }}</p>
-                                <p class="notification-body">{{ notification.text }}</p>
-                            </v-col>
-                            <v-col cols="3" md="3" sm="3">
-                                <p class="notification-body tx-r">{{ notification.date }}</p>
-                            </v-col>
-                        </v-row>
+                        <NotificationCard :notification="notification" />
                     </v-card>
                     <p class="more">Weitere...</p>
                 </v-card>
@@ -45,10 +28,11 @@
 </template>
 
 <script>
-import { _ } from "ajv";
 import store from "../store";
+import NotificationCard from "./NotificationCard.vue"
 
 export default {
+    components: { NotificationCard },
     methods: {
         getHoNotifications() {
             const notifications = store.getters.getNotifications;

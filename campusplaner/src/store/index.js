@@ -35,9 +35,6 @@ export default createStore({
     },
     getCourse(state){
       return state.courseData.courses;
-    },
-    getCourseById(state){
-      return state.courseData;
     }
   },
   mutations: {
@@ -60,9 +57,6 @@ export default createStore({
     },
     removeTodo(state, payload) {
       state.studentData.todos.splice(payload.index, 1);
-    },
-    setCourseById(state, payload) {
-      state.courseData = payload;
     }
   },
   actions: {
@@ -75,10 +69,6 @@ export default createStore({
       const matchedUser = studentData.students.find(e => {
         return e.id === payload.userName;
       });
-
-      const matchedCourse = courseData.courses.find(e => {
-        return e.id = payload.id;
-      })
 
       // Check if username is present
       if(!matchedUser){
@@ -94,7 +84,6 @@ export default createStore({
       commit('setStudentData', matchedUser.studentData);
       commit('setNotificationData', notificationData);
       commit('setCourseData', courseData);
-      commit('setCourseById', matchedCourse.courseData)
     },
     logout({commit}) {
       commit('logout');
