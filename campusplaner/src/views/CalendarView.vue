@@ -1,6 +1,6 @@
 <template>
   <v-row no-gutters>
-    <v-col cols="7" md="7" sm="12">
+    <v-col cols="7" md="11" sm="12">
       <v-card>
         <h1>MEIN KALENDER</h1>
         <div class="colours">
