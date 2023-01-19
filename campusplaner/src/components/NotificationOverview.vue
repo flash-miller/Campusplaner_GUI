@@ -1,5 +1,6 @@
 <template>
-    <div id="tv-img-div">
+    <div class="desktopView">
+        <div id="tv-img-div">
         <v-img class="tv-info" :src="require('@/assets/images/tv_info.jpg')" alt="TV-Information Picture" />
     </div>
     <div>
@@ -25,6 +26,57 @@
             </v-col>
         </v-row>
     </div>
+    </div>
+
+    <div class="mobileView">
+       
+        <div id="tv-img-div">
+        <v-img class="tv-info" :src="require('@/assets/images/tv_info.jpg')" alt="TV-Information Picture" />
+    </div>
+    <div>
+        <h3>BENACHRICHTIGUNGEN</h3>
+        <v-row no-gutters>
+            <v-col cols="6" md="6" sm="12">
+                <v-card class="notification-box">
+                    <p>HOCHSCHULE</p>
+                    <v-card class="notification" v-for="notification in getHoNotifications()">
+                        <v-row no-gutters>
+                            <v-col cols="8" md="8" sm="8">
+                                <p class="notification-header">{{ notification.headline }}</p>
+                                <p class="notification-body">{{ notification.text }}</p>
+                            </v-col>
+                            <v-col cols="9" md="9" sm="9">
+                                <p class="notification-body tx-r">{{ notification.date }}</p>
+                            </v-col>
+                        </v-row>
+
+                    </v-card>
+                    <p class="more">Weitere...</p>
+                </v-card>
+            </v-col>
+            <v-col cols="6" md="6" sm="12">
+                <v-card class="notification-box">
+                    <p>DOZENTEN</p>
+                    <v-card class="notification" v-for="notification in getCoursesByStudent()">
+                        <v-row no-gutters>
+                            <v-col cols="9" md="9" sm="9">
+                                <p class="notification-header">{{ notification.headline }}</p>
+                                <p class="notification-body">{{ notification.text }}</p>
+                            </v-col>
+                            <v-col cols="9" md="9" sm="9">
+                                <p class="notification-body tx-r">{{ notification.date }}</p>
+                            </v-col>
+                        </v-row>
+                    </v-card>
+                    <p class="more">Weitere...</p>
+                </v-card>
+            </v-col>
+        </v-row>
+    </div>
+    </div>
+
+
+   
 </template>
 
 <script>
@@ -66,6 +118,22 @@ export default {
 </script>
 
 <style>
+
+@media (max-width: 700px) {
+  .desktopView{
+    visibility: hidden;
+  }
+}
+
+
+
+@media (min-width: 701px) {
+  .mobileView{
+    visibility: hidden;
+  }
+
+}
+
 #tv-img-div {
     margin-bottom: 20px;
     display: flex;
