@@ -239,13 +239,14 @@
 </template>
 
 <script>
+import { VMain } from "vuetify/lib/components";
 import store from "../store";
 
 export default {
     methods: {
         darkmode() {
        
-            var element = document.querySelector("main" ,"v-card" , "v-col", "v-row", "div")
+            var element = document.querySelector("main" ,"v-card" , "v-col", "v-row", "div", "App")
 
             element.classList.toggle("dark-mode");
         

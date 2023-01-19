@@ -52,8 +52,8 @@
                             @click="navigate('university')" /></v-col>
                     <v-col sm="2"> <v-img class="courses" :src="require('@/assets/images/icons/buchicon.png')"
                             @click="navigate('courses')" /></v-col>
-                    <v-col sm="2"> <v-img class="education" :src="require('@/assets/images/icons/profilicon.png')"
-                            @click="navigate('education')" /></v-col>
+                    <v-col sm="2"> <v-img class="settings" :src="require('@/assets/images/icons/profilicon.png')"
+                            @click="navigate('settings')" /></v-col>
 
 
 
