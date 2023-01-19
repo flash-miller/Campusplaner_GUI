@@ -6,7 +6,7 @@
             <p>{{ course.period }}</p>
             <p>{{ course.examMethod }}</p>
             <p v-if="course.prerequirement">Übung ist eine Vorbedingung für weitere Module!</p>
-            <button id="registerC" @click="setCourseRegister()">{{ registerText }}</button>
+            <button id="registerC" @click="setCourseRegister(course.id)">{{ getRegisteredText() }}</button>
             <div v-if="hasOtherCourses()">
                 <h4>Zusätzliche Übung</h4>
                 <v-card v-for="practice in getOtherCourses()">
@@ -71,7 +71,7 @@ export default {
     data() {
         return {
             course: this.getCourseData(),
-            registerText: this.getRegisteredText()
+        
         }
     },
     components: {
@@ -115,17 +115,9 @@ export default {
                 return "Anmelden";
             }
         },
-        setCourseRegister(){
-            /*var data = fs.readFileSync("@/assets/data/studentData.json");
-            var studentsData = JSON.parse(data);
-            studentsData = studentsData.courses.push(courseId);
-            fs.writeFile(data, studentsData, err => {
-                if(err)
-                    throw err;
+        setCourseRegister(courseId){
+            store.dispatch("addCourse", courseId);
 
-                console.log("Added");
-            })
-            */
         }
     }
 }

@@ -146,7 +146,8 @@ export default {
     },
     rerenderCourseList() {
       this.redrawListKey += 1;
-    }
+    },
+    
   }
 }
 

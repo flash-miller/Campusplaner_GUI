@@ -244,10 +244,11 @@ import store from "../store";
 export default {
     methods: {
         darkmode() {
-            var element = document.querySelector('main');
-            var element2 = document.querySelectorAll('v-card');
+       
+            var element = document.querySelector("main" ,"v-card" , "v-col", "v-row", "div")
+
             element.classList.toggle("dark-mode");
-            element2.classList.toggle("dark-mode");
+        
          
         },
 
@@ -416,6 +417,7 @@ input:checked+.slider:before {
 
 .dark-mode {
     background: #16171d ;
+
   color: #fff;
 }
 

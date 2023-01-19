@@ -57,6 +57,9 @@ export default createStore({
     },
     removeTodo(state, payload) {
       state.studentData.todos.splice(payload.index, 1);
+    },
+    addCourse(state, payload){
+      state.studentData.courses.push(payload);
     }
   },
   actions: {
@@ -96,7 +99,11 @@ export default createStore({
     },
     removeTodo({commit}, payload) {
       commit('removeTodo', payload);
+    },
+    addCourse({commit}, payload){
+      commit('addCourse', payload)
     }
+
   },
   modules: {
   },
